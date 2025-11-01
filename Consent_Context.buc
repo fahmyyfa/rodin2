@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="PATIENTS"/>
+    <org.eventb.core.carrierSet name="(" org.eventb.core.identifier="AUTHORIZED_USERS"/>
+    <org.eventb.core.carrierSet name=")" org.eventb.core.identifier="SESSIONS"/>
+    <org.eventb.core.carrierSet name="*" org.eventb.core.identifier="ROLES"/>
+    <org.eventb.core.carrierSet name="+" org.eventb.core.identifier="FIELDS"/>
+    <org.eventb.core.carrierSet name="," org.eventb.core.identifier="CONSENTS"/>
+    <org.eventb.core.carrierSet name="-" org.eventb.core.identifier="QUERIES"/>
+    <org.eventb.core.carrierSet name="." org.eventb.core.identifier="STATUSES"/>
+    <org.eventb.core.constant name="/" org.eventb.core.identifier="NursingStaff"/>
+    <org.eventb.core.constant name="0" org.eventb.core.identifier="Oncologist"/>
+    <org.eventb.core.constant name="1" org.eventb.core.identifier="LabStaff"/>
+    <org.eventb.core.constant name="2" org.eventb.core.identifier="LegalStaff"/>
+    <org.eventb.core.constant name="3" org.eventb.core.identifier="LegalApprover"/>
+    <org.eventb.core.axiom name="4" org.eventb.core.label="axm1" org.eventb.core.predicate="NursingStaff ∈ ROLES"/>
+    <org.eventb.core.axiom name="5" org.eventb.core.label="axm2" org.eventb.core.predicate="Oncologist ∈ ROLES"/>
+    <org.eventb.core.axiom name="6" org.eventb.core.label="axm3" org.eventb.core.predicate="LabStaff ∈ ROLES"/>
+    <org.eventb.core.axiom name="7" org.eventb.core.label="axm4" org.eventb.core.predicate="LegalStaff ∈ ROLES"/>
+    <org.eventb.core.axiom name="8" org.eventb.core.label="axm5" org.eventb.core.predicate="LegalApprover ∈ ROLES"/>
+</org.eventb.core.contextFile>
