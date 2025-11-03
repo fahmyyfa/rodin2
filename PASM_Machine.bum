@@ -1,4 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="sessions ≔ ∅" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="userRoles ≔ ∅" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="pc ≔ ∅" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="patients ≔ ∅" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="crf ≔ ∅" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="queries ≔ ∅" org.eventb.core.label="act6"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="pf ≔ ∅" org.eventb.core.label="act7"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="authorizedConsent ≔ ∅" org.eventb.core.label="act8"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="withdrawalState ≔ ∅" org.eventb.core.label="act9"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="markAsDeleted ≔ ∅" org.eventb.core.label="act10"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="portableState ≔ ∅" org.eventb.core.label="act11"/>
+    </org.eventb.core.event>
+    <org.eventb.core.seesContext name=")" org.eventb.core.target="Consent_Context"/>
+    <org.eventb.core.variable name="*" org.eventb.core.identifier="portableState"/>
+    <org.eventb.core.invariant name="+" org.eventb.core.label="inv11" org.eventb.core.predicate="portableState ∈ (PATIENTS ↔ CONSENTS) ↔ STATUSES"/>
+    <org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CreatePortable ≡">
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalStaff"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ dom(pc) ∧ c ∈ ran(pc) ∧ {p ↦ c} ∉ dom(portableState)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="portableState  {{p ↦ c} ↦ Void} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="portableState({p ↦ c}) ≔ Void" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="/" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name="0" org.eventb.core.identifier="p"/>
+        <org.eventb.core.parameter name="1" org.eventb.core.identifier="c"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ApprovePortable ≡">
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="canPortable"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalApprover"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(portableState) ∧ portableState(pc1) = Void"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="portableState  {pc1 ↦ Approved} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="canPortable ∈ BOOL ∧ canPortable = TRUE"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="portableState(pc1) ≔ Approved" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="0" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name="1" org.eventb.core.identifier="pc1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RejectPortable ≡">
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalApprover"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(portableState) ∧ portableState(pc1) = Void"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="portableState  {pc1 ↦ Rejected} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="canPortable ∈ BOOL ∧ canPortable = FALSE"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="portableState(pc1) ≔ Rejected" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="0" org.eventb.core.identifier="canPortable"/>
+        <org.eventb.core.parameter name="1" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name="2" org.eventb.core.identifier="pc1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="/" org.eventb.core.identifier="sessions"/>
+    <org.eventb.core.variable name="0" org.eventb.core.identifier="userRoles"/>
+    <org.eventb.core.variable name="1" org.eventb.core.identifier="pc"/>
+    <org.eventb.core.variable name="2" org.eventb.core.identifier="patients"/>
+    <org.eventb.core.variable name="3" org.eventb.core.identifier="crf"/>
+    <org.eventb.core.variable name="4" org.eventb.core.identifier="queries"/>
+    <org.eventb.core.variable name="5" org.eventb.core.identifier="pf"/>
+    <org.eventb.core.variable name="6" org.eventb.core.identifier="authorizedConsent"/>
+    <org.eventb.core.variable name="7" org.eventb.core.identifier="withdrawalState"/>
+    <org.eventb.core.variable name="8" org.eventb.core.identifier="markAsDeleted"/>
+    <org.eventb.core.refinesMachine name="9" org.eventb.core.target="WASM_Machine"/>
 </org.eventb.core.machineFile>
