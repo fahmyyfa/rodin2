@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="FIELDS" org.eventb.core.type="ℙ(FIELDS)"/>
         <org.eventb.core.poIdentifier name="AUTHORIZED_USERS" org.eventb.core.type="ℙ(AUTHORIZED_USERS)"/>
@@ -26,7 +26,7 @@
         <org.eventb.core.poPredicate name="AUTHORIZED_USERZ" org.eventb.core.predicate="Approved∈STATUSES" org.eventb.core.source="/WASM_Project/Consent_Context.buc|org.eventb.core.contextFile#Consent_Context|org.eventb.core.axiom#&gt;"/>
         <org.eventb.core.poPredicate name="AUTHORIZED_USER[" org.eventb.core.predicate="Rejected∈STATUSES" org.eventb.core.source="/WASM_Project/Consent_Context.buc|org.eventb.core.contextFile#Consent_Context|org.eventb.core.axiom#?"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
         <org.eventb.core.poIdentifier name="queries" org.eventb.core.type="ℙ(AUTHORIZED_USERS×ℙ(QUERIES×PATIENTS))"/>
         <org.eventb.core.poIdentifier name="authorizedConsent" org.eventb.core.type="ℙ(AUTHORIZED_USERS×ℙ(PATIENTS×CONSENTS))"/>
         <org.eventb.core.poIdentifier name="markAsDeleted" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS))"/>
@@ -38,7 +38,23 @@
         <org.eventb.core.poIdentifier name="withdrawalState" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
         <org.eventb.core.poIdentifier name="patients" org.eventb.core.type="ℙ(PATIENTS)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsenu" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConsenu"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(SESSIONS×AUTHORIZED_USERS))∈SESSIONS ⤔ AUTHORIZED_USERS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#."/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#."/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConsenu"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES))∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsenu" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
         <org.eventb.core.poIdentifier name="pc'" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="sessions'" org.eventb.core.type="ℙ(SESSIONS×AUTHORIZED_USERS)"/>
         <org.eventb.core.poIdentifier name="authorizedConsent'" org.eventb.core.type="ℙ(AUTHORIZED_USERS×ℙ(PATIENTS×CONSENTS))"/>
@@ -50,99 +66,123 @@
         <org.eventb.core.poIdentifier name="withdrawalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
         <org.eventb.core.poIdentifier name="queries'" org.eventb.core.type="ℙ(AUTHORIZED_USERS×ℙ(QUERIES×PATIENTS))"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsenu" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenu" org.eventb.core.poStamp="0"/>
-    <org.eventb.core.poSequent name="CreateWithdrawal ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsenu" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenu" org.eventb.core.poStamp="6"/>
+    <org.eventb.core.poSequent name="CreateWithdrawal ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenv"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#9|org.eventb.core.guard#*"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#9|org.eventb.core.guard#*"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenv"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="CreateWithdrawal ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="CreateWithdrawal ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenv'"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#9|org.eventb.core.guard#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#9|org.eventb.core.guard#+"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenv'"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsenv" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="CreateWithdrawal ≡/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="7">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConsenv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="withdrawalState{{p ↦ c} ↦ Void}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#9"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poSequent#CreateWithdrawal ≡\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsenv" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="7">
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CONSENTS"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PATIENTS"/>
         <org.eventb.core.poIdentifier name="withdrawalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsenv'" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenv" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsenv'" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenv" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#9|org.eventb.core.guard#*"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsenv" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenv'" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsenv" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenv'" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[{sessions(s)}]∧r=LegalStaff" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#9|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈dom(pc)∧c∈ran(pc)∧{p ↦ c}∉dom(withdrawalState)" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#9|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="withdrawalState∪{{p ↦ c} ↦ Void}∈(PATIENTS ↔ CONSENTS) ↔ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#9|org.eventb.core.guard#-"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenw"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#*"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#*"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenw"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenw("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1∈dom(withdrawalState)⇒withdrawalState∈ℙ(PATIENTS × CONSENTS) ⇸ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenw("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsenw" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="7">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConsenw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="withdrawalState{pc1 ↦ Approved}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poSequent#ApproveWithdrawal ≡\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsenw" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="7">
         <org.eventb.core.poIdentifier name="markAsDeleted'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS))"/>
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="canWithdraw" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="withdrawalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsenw(" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenw" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsenw(" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenw" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[sessions[{s}]]∧r=LegalApprover" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsenw" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenw(" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsenw" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenw(" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1∈dom(withdrawalState)∧withdrawalState(pc1)=Void" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="withdrawalState{pc1 ↦ Approved}∈(PATIENTS ↔ CONSENTS) ↔ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="canWithdraw∈BOOL∧canWithdraw=TRUE" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="markAsDeleted∪{pc1}⊆PATIENTS ↔ CONSENTS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#\/"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="RejectWithdrawal ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="RejectWithdrawal ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenx"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#+"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenx"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RejectWithdrawal ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="RejectWithdrawal ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenx'"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenx'"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RejectWithdrawal ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="RejectWithdrawal ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenx("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1∈dom(withdrawalState)⇒withdrawalState∈ℙ(PATIENTS × CONSENTS) ⇸ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#-"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#-"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenx("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsenx" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="RejectWithdrawal ≡/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="7">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConsenx"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="withdrawalState{pc1 ↦ Rejected}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poSequent#RejectWithdrawal ≡\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsenx" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="7">
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="canWithdraw" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="withdrawalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsenx'" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenx" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsenx'" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsenx" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsenx(" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenx'" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsenx(" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenx'" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[{sessions(s)}]∧r=LegalApprover" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsenx" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenx(" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsenx" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsenx(" org.eventb.core.poStamp="7">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1∈dom(withdrawalState)∧withdrawalState(pc1)=Void" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="withdrawalState{pc1 ↦ Rejected}∈(PATIENTS ↔ CONSENTS) ↔ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="canWithdraw∈BOOL∧canWithdraw=FALSE" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#\/"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sessions∈SESSIONS ↔ AUTHORIZED_USERS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#."/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/WASM_Project/WASM_Machine.bpo|org.eventb.core.poFile#WASM_Machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sessions∈SESSIONS ⤔ AUTHORIZED_USERS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#."/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="userRoles∈AUTHORIZED_USERS ↔ ROLES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#\/"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc∈PATIENTS ↔ CONSENTS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#0"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="patients⊆PATIENTS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#1"/>
@@ -150,7 +190,7 @@
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="queries∈AUTHORIZED_USERS ↔ (QUERIES ↔ PATIENTS)" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#="/>
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="pf∈AUTHORIZED_USERS ↔ (PATIENTS ↔ FIELDS)" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#&gt;"/>
         <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="authorizedConsent∈AUTHORIZED_USERS ↔ (PATIENTS ↔ CONSENTS)" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#?"/>
-        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="withdrawalState∈(PATIENTS ↔ CONSENTS) ↔ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="withdrawalState∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#@"/>
         <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="markAsDeleted⊆PATIENTS ↔ CONSENTS" org.eventb.core.source="/WASM_Project/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.invariant#A"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
