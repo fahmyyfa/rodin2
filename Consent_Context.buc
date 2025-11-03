@@ -18,4 +18,10 @@
     <org.eventb.core.axiom name="6" org.eventb.core.label="axm3" org.eventb.core.predicate="LabStaff ∈ ROLES"/>
     <org.eventb.core.axiom name="7" org.eventb.core.label="axm4" org.eventb.core.predicate="LegalStaff ∈ ROLES"/>
     <org.eventb.core.axiom name="8" org.eventb.core.label="axm5" org.eventb.core.predicate="LegalApprover ∈ ROLES"/>
+    <org.eventb.core.constant name="9" org.eventb.core.identifier="Void"/>
+    <org.eventb.core.constant name=":" org.eventb.core.identifier="Approved"/>
+    <org.eventb.core.constant name=";" org.eventb.core.identifier="Rejected"/>
+    <org.eventb.core.axiom name="=" org.eventb.core.label="axm6" org.eventb.core.predicate="Void ∈ STATUSES"/>
+    <org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm7" org.eventb.core.predicate="Approved ∈ STATUSES"/>
+    <org.eventb.core.axiom name="?" org.eventb.core.label="axm8" org.eventb.core.predicate="Rejected ∈ STATUSES"/>
 </org.eventb.core.contextFile>
