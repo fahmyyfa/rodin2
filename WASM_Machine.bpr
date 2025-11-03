@@ -557,7 +557,6 @@
         </org.eventb.core.prRule>
         <org.eventb.core.prIdent name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.prIdent name="withdrawalState" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="withdrawalState∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="LegalStaff∈ROLES">
             <org.eventb.core.prIdent name="LegalStaff" org.eventb.core.type="ROLES"/>
             <org.eventb.core.prIdent name="ROLES" org.eventb.core.type="ℙ(ROLES)"/>
@@ -637,6 +636,7 @@
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Void∈STATUSES">
             <org.eventb.core.prIdent name="Void" org.eventb.core.type="STATUSES"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="withdrawalState∈(PATIENTS ↔ CONSENTS) → STATUSES"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="LabStaff∈ROLES">
             <org.eventb.core.prIdent name="LabStaff" org.eventb.core.type="ROLES"/>
             <org.eventb.core.prIdent name="ROLES" org.eventb.core.type="ℙ(ROLES)"/>
@@ -708,7 +708,6 @@
         </org.eventb.core.prRule>
         <org.eventb.core.prIdent name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.prIdent name="withdrawalState" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="withdrawalState∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
         <org.eventb.core.prPred name="p12" org.eventb.core.predicate="LegalStaff∈ROLES">
             <org.eventb.core.prIdent name="LegalStaff" org.eventb.core.type="ROLES"/>
             <org.eventb.core.prIdent name="ROLES" org.eventb.core.type="ℙ(ROLES)"/>
@@ -792,6 +791,7 @@
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Void∈STATUSES">
             <org.eventb.core.prIdent name="Void" org.eventb.core.type="STATUSES"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="withdrawalState∈(PATIENTS ↔ CONSENTS) → STATUSES"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="LabStaff∈ROLES">
             <org.eventb.core.prIdent name="LabStaff" org.eventb.core.type="ROLES"/>
             <org.eventb.core.prIdent name="ROLES" org.eventb.core.type="ℙ(ROLES)"/>
