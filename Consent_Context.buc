@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
-    <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="PATIENTS"/>
-    <org.eventb.core.carrierSet name="(" org.eventb.core.identifier="AUTHORIZED_USERS"/>
-    <org.eventb.core.carrierSet name=")" org.eventb.core.identifier="SESSIONS"/>
-    <org.eventb.core.carrierSet name="*" org.eventb.core.identifier="ROLES"/>
-    <org.eventb.core.carrierSet name="+" org.eventb.core.identifier="FIELDS"/>
-    <org.eventb.core.carrierSet name="," org.eventb.core.identifier="CONSENTS"/>
-    <org.eventb.core.carrierSet name="-" org.eventb.core.identifier="QUERIES"/>
-    <org.eventb.core.carrierSet name="." org.eventb.core.identifier="STATUSES"/>
-    <org.eventb.core.constant name="/" org.eventb.core.identifier="NursingStaff"/>
-    <org.eventb.core.constant name="0" org.eventb.core.identifier="Oncologist"/>
-    <org.eventb.core.constant name="1" org.eventb.core.identifier="LabStaff"/>
-    <org.eventb.core.constant name="2" org.eventb.core.identifier="LegalStaff"/>
-    <org.eventb.core.constant name="3" org.eventb.core.identifier="LegalApprover"/>
-    <org.eventb.core.axiom name="4" org.eventb.core.label="axm1" org.eventb.core.predicate="NursingStaff ∈ ROLES"/>
-    <org.eventb.core.axiom name="5" org.eventb.core.label="axm2" org.eventb.core.predicate="Oncologist ∈ ROLES"/>
-    <org.eventb.core.axiom name="6" org.eventb.core.label="axm3" org.eventb.core.predicate="LabStaff ∈ ROLES"/>
-    <org.eventb.core.axiom name="7" org.eventb.core.label="axm4" org.eventb.core.predicate="LegalStaff ∈ ROLES"/>
-    <org.eventb.core.axiom name="8" org.eventb.core.label="axm5" org.eventb.core.predicate="LegalApprover ∈ ROLES"/>
-    <org.eventb.core.constant name="9" org.eventb.core.identifier="Void"/>
-    <org.eventb.core.constant name=":" org.eventb.core.identifier="Approved"/>
-    <org.eventb.core.constant name=";" org.eventb.core.identifier="Rejected"/>
-    <org.eventb.core.axiom name="=" org.eventb.core.label="axm6" org.eventb.core.predicate="Void ∈ STATUSES"/>
-    <org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm7" org.eventb.core.predicate="Approved ∈ STATUSES"/>
-    <org.eventb.core.axiom name="?" org.eventb.core.label="axm8" org.eventb.core.predicate="Rejected ∈ STATUSES"/>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" version="3">
+    <org.eventb.core.carrierSet name="'" org.eventb.core.generated="false" org.eventb.core.identifier="PATIENTS"/>
+    <org.eventb.core.carrierSet name="(" org.eventb.core.generated="false" org.eventb.core.identifier="AUTHORIZED_USERS"/>
+    <org.eventb.core.carrierSet name=")" org.eventb.core.generated="false" org.eventb.core.identifier="SESSIONS"/>
+    <org.eventb.core.carrierSet name="*" org.eventb.core.generated="false" org.eventb.core.identifier="ROLES"/>
+    <org.eventb.core.carrierSet name="+" org.eventb.core.generated="false" org.eventb.core.identifier="FIELDS"/>
+    <org.eventb.core.carrierSet name="," org.eventb.core.generated="false" org.eventb.core.identifier="CONSENTS"/>
+    <org.eventb.core.carrierSet name="-" org.eventb.core.generated="false" org.eventb.core.identifier="QUERIES"/>
+    <org.eventb.core.carrierSet name="." org.eventb.core.generated="false" org.eventb.core.identifier="STATUSES"/>
+    <org.eventb.core.constant name="/" org.eventb.core.generated="false" org.eventb.core.identifier="NursingStaff"/>
+    <org.eventb.core.constant name="0" org.eventb.core.generated="false" org.eventb.core.identifier="Oncologist"/>
+    <org.eventb.core.constant name="1" org.eventb.core.generated="false" org.eventb.core.identifier="LabStaff"/>
+    <org.eventb.core.constant name="2" org.eventb.core.generated="false" org.eventb.core.identifier="LegalStaff"/>
+    <org.eventb.core.constant name="3" org.eventb.core.generated="false" org.eventb.core.identifier="LegalApprover"/>
+    <org.eventb.core.axiom name="4" org.eventb.core.generated="false" org.eventb.core.label="axm1" org.eventb.core.predicate="NursingStaff ∈ ROLES"/>
+    <org.eventb.core.axiom name="5" org.eventb.core.generated="false" org.eventb.core.label="axm2" org.eventb.core.predicate="Oncologist ∈ ROLES"/>
+    <org.eventb.core.axiom name="6" org.eventb.core.generated="false" org.eventb.core.label="axm3" org.eventb.core.predicate="LabStaff ∈ ROLES"/>
+    <org.eventb.core.axiom name="7" org.eventb.core.generated="false" org.eventb.core.label="axm4" org.eventb.core.predicate="LegalStaff ∈ ROLES"/>
+    <org.eventb.core.axiom name="8" org.eventb.core.generated="false" org.eventb.core.label="axm5" org.eventb.core.predicate="LegalApprover ∈ ROLES"/>
+    <org.eventb.core.constant name="9" org.eventb.core.generated="false" org.eventb.core.identifier="Void"/>
+    <org.eventb.core.constant name=":" org.eventb.core.generated="false" org.eventb.core.identifier="Approved"/>
+    <org.eventb.core.constant name=";" org.eventb.core.generated="false" org.eventb.core.identifier="Rejected"/>
+    <org.eventb.core.axiom name="=" org.eventb.core.generated="false" org.eventb.core.label="axm6" org.eventb.core.predicate="Void ∈ STATUSES"/>
+    <org.eventb.core.axiom name="&gt;" org.eventb.core.generated="false" org.eventb.core.label="axm7" org.eventb.core.predicate="Approved ∈ STATUSES"/>
+    <org.eventb.core.axiom name="?" org.eventb.core.generated="false" org.eventb.core.label="axm8" org.eventb.core.predicate="Rejected ∈ STATUSES"/>
+    <ac.soton.eventb.emf.core.extension.persistence.serialisedExtension ac.soton.eventb.emf.core.extension.persistence.eClassifier="Classdiagram" ac.soton.eventb.emf.core.extension.persistence.ePackageURI="http://soton.ac.uk/models/eventb/classdiagrams/2020" ac.soton.eventb.emf.core.extension.persistence.extensionId="ac.soton.eventb.classdiagrams._QCfHcLquEfCdZbxqlJPQZw" ac.soton.eventb.emf.core.extension.persistence.serialised="&lt;classdiagrams:Classdiagram xmi:version=&quot;2.0&quot; xmlns:xmi=&quot;http://www.omg.org/XMI&quot; xmlns:classdiagrams=&quot;http://soton.ac.uk/models/eventb/classdiagrams/2020&quot; name=&quot;Consent&quot; extensionId=&quot;ac.soton.eventb.classdiagrams._QCfHcLquEfCdZbxqlJPQZw&quot;&gt;&#13;&#10;  &lt;annotations source=&quot;http:///org/eventb/core/RodinInternalAnnotations&quot;&gt;&#13;&#10;    &lt;details key=&quot;name&quot; value=&quot;_QmM4gLquEfCdZbxqlJPQZw&quot;/&gt;&#13;&#10;  &lt;/annotations&gt;&#13;&#10;  &lt;classes dataKind=&quot;Carrier set&quot;/&gt;&#13;&#10;&lt;/classdiagrams:Classdiagram&gt;&#13;&#10;" name="_QmM4gLquEfCdZbxqlJPQZw" org.eventb.core.generated="false"/>
 </org.eventb.core.contextFile>

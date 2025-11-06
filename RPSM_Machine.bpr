@@ -2309,4 +2309,89 @@
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="{sessions(s)} ⩤ authorizedConsent∈AUTHORIZED_USERS ⇸ (PATIENTS ↔ CONSENTS)"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
     </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="AUTHORIZED_USERS,CONSENTS,PATIENTS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(AUTHORIZED_USERS×ℙ(PATIENTS×CONSENTS)))∈AUTHORIZED_USERS ⇸ (PATIENTS ↔ CONSENTS)"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="LegalStaff∈ROLES">
+            <org.eventb.core.prIdent name="LegalStaff" org.eventb.core.type="ROLES"/>
+            <org.eventb.core.prIdent name="ROLES" org.eventb.core.type="ℙ(ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Rejected∈STATUSES">
+            <org.eventb.core.prIdent name="Rejected" org.eventb.core.type="STATUSES"/>
+            <org.eventb.core.prIdent name="STATUSES" org.eventb.core.type="ℙ(STATUSES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="Void∈STATUSES">
+            <org.eventb.core.prIdent name="STATUSES" org.eventb.core.type="ℙ(STATUSES)"/>
+            <org.eventb.core.prIdent name="Void" org.eventb.core.type="STATUSES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="LabStaff∈ROLES">
+            <org.eventb.core.prIdent name="LabStaff" org.eventb.core.type="ROLES"/>
+            <org.eventb.core.prIdent name="ROLES" org.eventb.core.type="ℙ(ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="CEO∈PEOPLE">
+            <org.eventb.core.prIdent name="CEO" org.eventb.core.type="PEOPLE"/>
+            <org.eventb.core.prIdent name="PEOPLE" org.eventb.core.type="ℙ(PEOPLE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="Approved∈STATUSES">
+            <org.eventb.core.prIdent name="Approved" org.eventb.core.type="STATUSES"/>
+            <org.eventb.core.prIdent name="STATUSES" org.eventb.core.type="ℙ(STATUSES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="LegalApprover∈ROLES">
+            <org.eventb.core.prIdent name="LegalApprover" org.eventb.core.type="ROLES"/>
+            <org.eventb.core.prIdent name="ROLES" org.eventb.core.type="ℙ(ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="NursingStaff∈ROLES">
+            <org.eventb.core.prIdent name="NursingStaff" org.eventb.core.type="ROLES"/>
+            <org.eventb.core.prIdent name="ROLES" org.eventb.core.type="ℙ(ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Oncologist∈ROLES">
+            <org.eventb.core.prIdent name="Oncologist" org.eventb.core.type="ROLES"/>
+            <org.eventb.core.prIdent name="ROLES" org.eventb.core.type="ℙ(ROLES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="CheckAuthorizeConsent ≡/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="AUTHORIZED_USERS,CONSENTS,PATIENTS,SESSIONS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+        <org.eventb.core.prIdent name="authorizedConsent" org.eventb.core.type="ℙ(AUTHORIZED_USERS×ℙ(PATIENTS×CONSENTS))"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="CONSENTS"/>
+        <org.eventb.core.prIdent name="p" org.eventb.core.type="PATIENTS"/>
+        <org.eventb.core.prIdent name="s" org.eventb.core.type="SESSIONS"/>
+        <org.eventb.core.prIdent name="sessions" org.eventb.core.type="ℙ(SESSIONS×AUTHORIZED_USERS)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="authorizedConsent{sessions(s) ↦ {p ↦ c}}∈AUTHORIZED_USERS ⇸ (PATIENTS ↔ CONSENTS)"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="Logout ≡/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="AUTHORIZED_USERS,CONSENTS,PATIENTS,SESSIONS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+        <org.eventb.core.prIdent name="authorizedConsent" org.eventb.core.type="ℙ(AUTHORIZED_USERS×ℙ(PATIENTS×CONSENTS))"/>
+        <org.eventb.core.prIdent name="s" org.eventb.core.type="SESSIONS"/>
+        <org.eventb.core.prIdent name="sessions" org.eventb.core.type="ℙ(SESSIONS×AUTHORIZED_USERS)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="{sessions(s)} ⩤ authorizedConsent∈AUTHORIZED_USERS ⇸ (PATIENTS ↔ CONSENTS)"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
 </org.eventb.core.prFile>

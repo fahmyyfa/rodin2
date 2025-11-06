@@ -6,9 +6,9 @@
         <org.eventb.core.poIdentifier name="PEOPLE" org.eventb.core.type="ℙ(PEOPLE)"/>
         <org.eventb.core.poIdentifier name="CEO" org.eventb.core.type="PEOPLE"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/WASM_Project/Konteks_Test.bpo|org.eventb.core.poFile#Konteks_Test|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEO∈PEOPLE" org.eventb.core.source="/WASM_Project/Konteks_Test.buc|org.eventb.core.contextFile#Konteks_Test|org.eventb.core.axiom#)"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="⊤" org.eventb.core.source="/WASM_Project/Konteks_Test.buc|org.eventb.core.contextFile#Konteks_Test|org.eventb.core.axiom#,"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="⊤" org.eventb.core.source="/WASM_Project/Konteks_Test.buc|org.eventb.core.contextFile#Konteks_Test|org.eventb.core.axiom#\/"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/GDPR_CMS/Konteks_Test.bpo|org.eventb.core.poFile#Konteks_Test|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEO∈PEOPLE" org.eventb.core.source="/GDPR_CMS/Konteks_Test.buc|org.eventb.core.contextFile#Konteks_Test|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="⊤" org.eventb.core.source="/GDPR_CMS/Konteks_Test.buc|org.eventb.core.contextFile#Konteks_Test|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="⊤" org.eventb.core.source="/GDPR_CMS/Konteks_Test.buc|org.eventb.core.contextFile#Konteks_Test|org.eventb.core.axiom#\/"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:classdiagrams="http://soton.ac.uk/models/eventb/classdiagrams/2020" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="__xSAsLonEfCiaPjCdKtWCA" type="Classdiagrams" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_BPQakLooEfCiaPjCdKtWCA" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BPSPwLooEfCiaPjCdKtWCA" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BPS20LooEfCiaPjCdKtWCA" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BPS20booEfCiaPjCdKtWCA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BPS20rooEfCiaPjCdKtWCA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BPS207ooEfCiaPjCdKtWCA" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BPS21LooEfCiaPjCdKtWCA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BPS21booEfCiaPjCdKtWCA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BPS21rooEfCiaPjCdKtWCA" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BPS217ooEfCiaPjCdKtWCA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BPS22LooEfCiaPjCdKtWCA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BPS22booEfCiaPjCdKtWCA" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BPS22rooEfCiaPjCdKtWCA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BPS227ooEfCiaPjCdKtWCA"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_BPQakbooEfCiaPjCdKtWCA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BPQakrooEfCiaPjCdKtWCA" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_BPQak7ooEfCiaPjCdKtWCA"/>
+    <element xmi:type="classdiagrams:Class" href="RPSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::RPSM_Machine.RPSM."/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BPQalLooEfCiaPjCdKtWCA" x="162" y="174" width="289" height="283"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="__xSAsbonEfCiaPjCdKtWCA"/>
+  <element xmi:type="classdiagrams:Classdiagram" href="RPSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Classdiagram::RPSM_Machine.RPSM"/>
+</notation:Diagram>

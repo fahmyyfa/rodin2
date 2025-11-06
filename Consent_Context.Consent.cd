@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:classdiagrams="http://soton.ac.uk/models/eventb/classdiagrams/2020" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_Q7SXsLquEfCdZbxqlJPQZw" type="Classdiagrams" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_Rj0-YLquEfCdZbxqlJPQZw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Rj2zkLquEfCdZbxqlJPQZw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Rj2zkbquEfCdZbxqlJPQZw" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rj2zkrquEfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rj2zk7quEfCdZbxqlJPQZw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Rj2zlLquEfCdZbxqlJPQZw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rj2zlbquEfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rj2zlrquEfCdZbxqlJPQZw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Rj2zl7quEfCdZbxqlJPQZw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rj2zmLquEfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rj2zmbquEfCdZbxqlJPQZw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Rj2zmrquEfCdZbxqlJPQZw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rj2zm7quEfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rj2znLquEfCdZbxqlJPQZw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_Rj0-YbquEfCdZbxqlJPQZw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Rj0-YrquEfCdZbxqlJPQZw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_Rj0-Y7quEfCdZbxqlJPQZw"/>
+    <element xmi:type="classdiagrams:Class" href="Consent_Context.buc#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::Consent_Context.Consent."/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rj0-ZLquEfCdZbxqlJPQZw" x="234" y="96" width="295" height="259"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_Q7SXsbquEfCdZbxqlJPQZw"/>
+  <element xmi:type="classdiagrams:Classdiagram" href="Consent_Context.buc#http://soton.ac.uk/models/eventb/classdiagrams/2020::Classdiagram::Consent_Context.Consent"/>
+</notation:Diagram>
