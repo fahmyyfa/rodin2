@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:classdiagrams="http://soton.ac.uk/models/eventb/classdiagrams/2020" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_uZ4UMLogEfCrbNx7X5bG_Q" type="Classdiagrams" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_xqX_ILohEfCrbNx7X5bG_Q" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_xqYmMLohEfCrbNx7X5bG_Q" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_xqYmMbohEfCrbNx7X5bG_Q" type="7006">
+      <children xmi:type="notation:Node" xmi:id="_cTY-ALoiEfCrbNx7X5bG_Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::PASM_Machine.Consent Management Service Model.Consent Context."/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cTY-AboiEfCrbNx7X5bG_Q"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_xqYmMrohEfCrbNx7X5bG_Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_xqYmM7ohEfCrbNx7X5bG_Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_xqYmNLohEfCrbNx7X5bG_Q" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_xqYmNbohEfCrbNx7X5bG_Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_xqYmNrohEfCrbNx7X5bG_Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_xqYmN7ohEfCrbNx7X5bG_Q" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_xqYmOLohEfCrbNx7X5bG_Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_xqYmObohEfCrbNx7X5bG_Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_xqYmOrohEfCrbNx7X5bG_Q" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_xqYmO7ohEfCrbNx7X5bG_Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_xqYmPLohEfCrbNx7X5bG_Q"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_xqX_IbohEfCrbNx7X5bG_Q"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_xqX_IrohEfCrbNx7X5bG_Q" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_xqX_I7ohEfCrbNx7X5bG_Q"/>
+    <element xmi:type="classdiagrams:Class" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::PASM_Machine.Consent Management Service Model.Consent Context"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xqX_JLohEfCrbNx7X5bG_Q" x="192" y="84" width="241" height="259"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_hKf24LoiEfCrbNx7X5bG_Q" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_hKf25boiEfCrbNx7X5bG_Q" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_hKf25roiEfCrbNx7X5bG_Q" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_hKf257oiEfCrbNx7X5bG_Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_hKf26LoiEfCrbNx7X5bG_Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_hKf26boiEfCrbNx7X5bG_Q" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_hKf26roiEfCrbNx7X5bG_Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_hKf267oiEfCrbNx7X5bG_Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_hKf27LoiEfCrbNx7X5bG_Q" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_hKf27boiEfCrbNx7X5bG_Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_hKf27roiEfCrbNx7X5bG_Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_hKf277oiEfCrbNx7X5bG_Q" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_hKf28LoiEfCrbNx7X5bG_Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_hKf28boiEfCrbNx7X5bG_Q"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_hKf24boiEfCrbNx7X5bG_Q"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_hKf24roiEfCrbNx7X5bG_Q" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_hKf247oiEfCrbNx7X5bG_Q"/>
+    <element xmi:type="classdiagrams:Class" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::PASM_Machine.Consent Management Service Model.Konteks Test"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hKf25LoiEfCrbNx7X5bG_Q" x="648" y="78" width="181" height="259"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_uZ4UMbogEfCrbNx7X5bG_Q"/>
+  <element xmi:type="classdiagrams:Classdiagram" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Classdiagram::PASM_Machine.Consent Management Service Model"/>
+  <edges xmi:type="notation:Edge" xmi:id="_hKmkkLoiEfCrbNx7X5bG_Q" type="4005" source="_hKf24LoiEfCrbNx7X5bG_Q" target="_xqX_ILohEfCrbNx7X5bG_Q">
+    <children xmi:type="notation:DecorationNode" xmi:id="_hKmklLoiEfCrbNx7X5bG_Q" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hKmklboiEfCrbNx7X5bG_Q" x="4" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_hKmklroiEfCrbNx7X5bG_Q" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hKmkl7oiEfCrbNx7X5bG_Q" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_hKmkmLoiEfCrbNx7X5bG_Q" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hKmkmboiEfCrbNx7X5bG_Q" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_hKmkkboiEfCrbNx7X5bG_Q"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_hKmkkroiEfCrbNx7X5bG_Q" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::PASM_Machine.Consent Management Service Model."/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hKmkk7oiEfCrbNx7X5bG_Q" points="[-90, 0, 336, -6]$[-198, 0, 228, -6]$[-305, 0, 121, -6]"/>
+  </edges>
+</notation:Diagram>

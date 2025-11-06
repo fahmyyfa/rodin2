@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:statemachines="http://soton.ac.uk/models/eventb/statemachines/2014" xmi:id="_uOx7Zbq4EfCdZbxqlJPQZw" type="Statemachines" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_vPxeULq4EfCdZbxqlJPQZw" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_vPxeVLq4EfCdZbxqlJPQZw" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_vPxeVbq4EfCdZbxqlJPQZw" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_vPxeVrq4EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_vPxeV7q4EfCdZbxqlJPQZw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_vPxeWLq4EfCdZbxqlJPQZw" type="7013">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_vPxeWbq4EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_vPxeWrq4EfCdZbxqlJPQZw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_vPxeUbq4EfCdZbxqlJPQZw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_vPxeUrq4EfCdZbxqlJPQZw" fontName="Segoe UI"/>
+    <element xmi:type="statemachines:State" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/statemachines/2014::State::PASM_Machine.PASM_Visual.Logged In"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vPxeU7q4EfCdZbxqlJPQZw" x="114" y="187"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_lTPuULq5EfCdZbxqlJPQZw" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_lTPuVLq5EfCdZbxqlJPQZw" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_lTPuVbq5EfCdZbxqlJPQZw" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_lTPuVrq5EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_lTPuV7q5EfCdZbxqlJPQZw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_lTPuWLq5EfCdZbxqlJPQZw" type="7013">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_lTPuWbq5EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_lTPuWrq5EfCdZbxqlJPQZw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_lTPuUbq5EfCdZbxqlJPQZw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_lTPuUrq5EfCdZbxqlJPQZw" fontName="Segoe UI"/>
+    <element xmi:type="statemachines:State" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/statemachines/2014::State::PASM_Machine.PASM_Visual.Session Started"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lTPuU7q5EfCdZbxqlJPQZw" x="252" y="192" width="109" height="43"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_nTJwkLq5EfCdZbxqlJPQZw" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nTJwlLq5EfCdZbxqlJPQZw" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nTJwlbq5EfCdZbxqlJPQZw" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nTJwlrq5EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nTJwl7q5EfCdZbxqlJPQZw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nTJwmLq5EfCdZbxqlJPQZw" type="7013">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nTJwmbq5EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nTJwmrq5EfCdZbxqlJPQZw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_nTJwkbq5EfCdZbxqlJPQZw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nTJwkrq5EfCdZbxqlJPQZw" fontName="Segoe UI"/>
+    <element xmi:type="statemachines:State" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/statemachines/2014::State::PASM_Machine.PASM_Visual.Portable Requested"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nTJwk7q5EfCdZbxqlJPQZw" x="402" y="192" width="103" height="49"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_pCLeMLq5EfCdZbxqlJPQZw" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_pCLeNLq5EfCdZbxqlJPQZw" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_pCLeNbq5EfCdZbxqlJPQZw" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_pCLeNrq5EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_pCLeN7q5EfCdZbxqlJPQZw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_pCLeOLq5EfCdZbxqlJPQZw" type="7013">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_pCLeObq5EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_pCLeOrq5EfCdZbxqlJPQZw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_pCLeMbq5EfCdZbxqlJPQZw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_pCLeMrq5EfCdZbxqlJPQZw" fontName="Segoe UI"/>
+    <element xmi:type="statemachines:State" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/statemachines/2014::State::PASM_Machine.PASM_Visual.Portable Approved"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pCLeM7q5EfCdZbxqlJPQZw" x="570" y="192" width="109" height="55"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rDaWILq5EfCdZbxqlJPQZw" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rDaWJLq5EfCdZbxqlJPQZw" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rDaWJbq5EfCdZbxqlJPQZw" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rDaWJrq5EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rDaWJ7q5EfCdZbxqlJPQZw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rDaWKLq5EfCdZbxqlJPQZw" type="7013">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rDaWKbq5EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rDaWKrq5EfCdZbxqlJPQZw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rDaWIbq5EfCdZbxqlJPQZw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rDaWIrq5EfCdZbxqlJPQZw" fontName="Segoe UI"/>
+    <element xmi:type="statemachines:State" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/statemachines/2014::State::PASM_Machine.PASM_Visual.Portable Rejected"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rDaWI7q5EfCdZbxqlJPQZw" x="393" y="384" width="115" height="55"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_sr26oLq5EfCdZbxqlJPQZw" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_sr4IwLq5EfCdZbxqlJPQZw" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_sr4Iwbq5EfCdZbxqlJPQZw" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_sr4Iwrq5EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_sr4Iw7q5EfCdZbxqlJPQZw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_sr4IxLq5EfCdZbxqlJPQZw" type="7013">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_sr4Ixbq5EfCdZbxqlJPQZw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_sr4Ixrq5EfCdZbxqlJPQZw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_sr26obq5EfCdZbxqlJPQZw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_sr26orq5EfCdZbxqlJPQZw" fontName="Segoe UI"/>
+    <element xmi:type="statemachines:State" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/statemachines/2014::State::PASM_Machine.PASM_Visual.Logged Out"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sr26o7q5EfCdZbxqlJPQZw" x="780" y="276" width="109" height="73"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_0k23MLq5EfCdZbxqlJPQZw" type="2006">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_0k23Mbq5EfCdZbxqlJPQZw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_0k23Mrq5EfCdZbxqlJPQZw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_0k23M7q5EfCdZbxqlJPQZw"/>
+    <element xmi:type="statemachines:Initial" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Initial::PASM_Machine.PASM_Visual.PASM_Visual_initial1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0k23NLq5EfCdZbxqlJPQZw" x="114" y="60" width="73" height="55"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_uOx7Zrq4EfCdZbxqlJPQZw"/>
+  <element xmi:type="statemachines:Statemachine" href="PASM_Machine.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Statemachine::PASM_Machine.PASM_Visual"/>
+</notation:Diagram>
