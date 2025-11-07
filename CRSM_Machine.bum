@@ -1,240 +1,242 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="sessions ≔ ∅" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="userRoles ≔ ∅" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="pc ≔ ∅" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="patients ≔ ∅" org.eventb.core.label="act4"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="crf ≔ ∅" org.eventb.core.label="act5"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="queries ≔ ∅" org.eventb.core.label="act6"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="pf ≔ ∅" org.eventb.core.label="act7"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="authorizedConsent ≔ ∅" org.eventb.core.label="act8"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="withdrawalState ≔ ∅" org.eventb.core.label="act9"/>
-        <org.eventb.core.action name="5" org.eventb.core.assignment="markAsDeleted ≔ ∅" org.eventb.core.label="act10"/>
-        <org.eventb.core.action name="1" org.eventb.core.assignment="portableState ≔ ∅" org.eventb.core.label="act11"/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="isConsentExpired ≔ ∅" org.eventb.core.label="act12"/>
-        <org.eventb.core.action name="3" org.eventb.core.assignment="markAsReceived ≔ ∅" org.eventb.core.label="act13"/>
-        <org.eventb.core.action name="4" org.eventb.core.assignment="consentRenewalState ≔ ∅" org.eventb.core.label="act14"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="p" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Login ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Login ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="u"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ SESSIONS ∧ s ∉ dom(sessions)"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="u ∈ AUTHORIZED_USERS ∧ u ∉ ran(sessions)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="sessions ∪ {s ↦ u} ∈ SESSIONS ⤔ AUTHORIZED_USERS"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="sessions ≔ sessions ∪ {s ↦ u}" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="o" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Logout ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Logout ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions)"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="{sessions(s)} ⩤ queries ∈ AUTHORIZED_USERS ⇸ (QUERIES ↔ PATIENTS)"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="{sessions(s)} ⩤ authorizedConsent ∈ AUTHORIZED_USERS ⇸ (PATIENTS ↔ CONSENTS)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="{sessions(s)} ⩤ pf ∈ AUTHORIZED_USERS ⇸ (PATIENTS ↔ FIELDS)"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="sessions ⩥ {sessions(s)} ∈ SESSIONS ⤔ AUTHORIZED_USERS"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="queries ≔ {sessions(s)} ⩤ queries" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="authorizedConsent ≔ {sessions(s)} ⩤ authorizedConsent" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="pf ≔ {sessions(s)} ⩤ pf" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="1" org.eventb.core.assignment="sessions ≔ sessions ⩥ {sessions(s)}" org.eventb.core.label="act4"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="n" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddConsent ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AddConsent ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="p"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = NursingStaff"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ patients ∧ c ∈ dom(crf)"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="p ↦ c ∉ pc"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="pc ∪ {p ↦ c} ∈ PATIENTS ↔ CONSENTS"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="sessions(s) ∉ dom(queries)"/>
-        <org.eventb.core.action name="1" org.eventb.core.assignment="pc ≔ pc ∪ {p ↦ c}" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="m" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddPatient ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AddPatient ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="p"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = NursingStaff"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ PATIENTS ∧ p ∉ patients"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="sessions(s) ∉ dom(queries)"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="patients ≔ patients ∪ {p}" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="l" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CreateInquiry ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CreateInquiry ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="p"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="q"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="q ∈ QUERIES ∧ p ∈ dom(pc) ∧ sessions(s) ∉ dom(queries)"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="queries  {sessions(s) ↦ {q ↦ p}} ∈ AUTHORIZED_USERS ⇸ (QUERIES ↔ PATIENTS)"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="queries(sessions(s)) ≔ {q ↦ p}" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="k" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CheckAuthorizeConsent ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CheckAuthorizeConsent ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="p"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="c"/>
-        <org.eventb.core.parameter name="+" org.eventb.core.identifier="consentExpired"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(queries)"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="consentExpired ∈ BOOL ∧ consentExpired = FALSE"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="c ∈ pc[{p}] ∧ c ∈ dom(crf)"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r ∈ dom(crf(c))"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="sessions(s) ∉ dom(authorizedConsent)"/>
-        <org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="authorizedConsent  {sessions(s) ↦ {p ↦ c}} ∈ AUTHORIZED_USERS ⇸ (PATIENTS ↔ CONSENTS)"/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="authorizedConsent(sessions(s)) ≔ {p ↦ c}" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="j" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ExecuteQuery ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ExecuteQuery ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="p"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(queries)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="p ∈ ran(queries(sessions(s))) ∧ c ∈ dom(crf)"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="sessions(s) ∈ dom(authorizedConsent) ∧ p ↦ c ∈ authorizedConsent(sessions(s))"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="sessions(s) ∉ dom(pf)"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="pf  {sessions(s) ↦ {p} × ran(userRoles[sessions[{s}]] ◁ crf(c))} ∈ AUTHORIZED_USERS ⇸ (PATIENTS ↔ FIELDS)"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="pf(sessions(s)) ≔ {p} × ran(userRoles[sessions[{s}]] ◁ crf(c))" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.seesContext name=")" org.eventb.core.target="Consent_Context"/>
-    <org.eventb.core.variable name="*" org.eventb.core.identifier="sessions"/>
-    <org.eventb.core.variable name="+" org.eventb.core.identifier="userRoles"/>
-    <org.eventb.core.variable name="," org.eventb.core.identifier="pc"/>
-    <org.eventb.core.variable name="-" org.eventb.core.identifier="patients"/>
-    <org.eventb.core.invariant name="." org.eventb.core.label="inv1" org.eventb.core.predicate="sessions ∈ SESSIONS ⤔ AUTHORIZED_USERS"/>
-    <org.eventb.core.invariant name="/" org.eventb.core.label="inv2" org.eventb.core.predicate="userRoles ∈ AUTHORIZED_USERS ↔ ROLES"/>
-    <org.eventb.core.invariant name="0" org.eventb.core.label="inv3" org.eventb.core.predicate="pc ∈ PATIENTS ↔ CONSENTS"/>
-    <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CreateConsentRenewalRequest ≡">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="p"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalStaff"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ dom(pc) ∧ c ∈ ran(pc) ∧ {p ↦ c} ∉ dom(consentRenewalState)"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="expired ∈ BOOL ∧ expired = TRUE"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="isWithdrawn ∈ BOOL ∧ isWithdrawn = FALSE"/>
-        <org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="consentRenewalState  {{p ↦ c} ↦ Void} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
-        <org.eventb.core.action name="3" org.eventb.core.assignment="consentRenewalState({p ↦ c}) ≔ Void" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="4" org.eventb.core.assignment="isConsentExpired({p ↦ c}) ≔ TRUE" org.eventb.core.label="act2"/>
-        <org.eventb.core.guard name="5" org.eventb.core.label="grd7" org.eventb.core.predicate="isConsentExpired  {{p ↦ c} ↦ TRUE} ∈ (PATIENTS ↔ CONSENTS) ⤔ BOOL"/>
-        <org.eventb.core.parameter name="6" org.eventb.core.identifier="expired"/>
-        <org.eventb.core.parameter name="7" org.eventb.core.identifier="isWithdrawn"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="NotifyPatient ≡">
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="pc1"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="acceptStatus"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalStaff"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ⊆ markAsReceived ∧ pc1 ∈ dom(consentRenewalState) ∧ consentRenewalState(pc1) = Void"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="acceptStatus ∈ STATUSES∖{Void}"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="consentRenewalState(pc1) ≔ acceptStatus" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="1" org.eventb.core.assignment="markAsReceived ≔ markAsReceived ∪ pc1" org.eventb.core.label="act2"/>
-        <org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="consentRenewalState  {pc1 ↦ acceptStatus} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ExtendConsentExpiration ≡">
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="pc1"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalStaff"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(consentRenewalState) ∧ consentRenewalState(pc1) = Approved"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="pc1 ⊆ markAsReceived ∧ pc1 ∈ dom(isConsentExpired) ∧ isConsentExpired(pc1) = TRUE"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="isConsentExpired(pc1) ≔ FALSE" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="isConsentExpired  {pc1 ↦ FALSE} ∈ (PATIENTS ↔ CONSENTS) ⤔ BOOL"/>
-    </org.eventb.core.event>
-    <org.eventb.core.variable name="@" org.eventb.core.identifier="crf"/>
-    <org.eventb.core.variable name="A" org.eventb.core.identifier="queries"/>
-    <org.eventb.core.variable name="B" org.eventb.core.identifier="pf"/>
-    <org.eventb.core.variable name="F" org.eventb.core.identifier="withdrawalState"/>
-    <org.eventb.core.variable name="G" org.eventb.core.identifier="markAsDeleted"/>
-    <org.eventb.core.variable name="V" org.eventb.core.identifier="authorizedConsent"/>
-    <org.eventb.core.variable name="H" org.eventb.core.identifier="portableState"/>
-    <org.eventb.core.variable name="J" org.eventb.core.identifier="isConsentExpired"/>
-    <org.eventb.core.variable name="K" org.eventb.core.identifier="markAsReceived"/>
-    <org.eventb.core.variable name="L" org.eventb.core.identifier="consentRenewalState"/>
-    <org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CreateWithdrawal ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CreateWithdrawal ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="p"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalStaff"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ dom(pc) ∧ c ∈ ran(pc) ∧ {p ↦ c} ∉ dom(withdrawalState)"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="withdrawalState({p ↦ c}) ≔ Void" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ApproveWithdrawal ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ApproveWithdrawal ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="pc1"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="canWithdraw"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalApprover"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(withdrawalState) ∧ withdrawalState(pc1) = Void"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="canWithdraw ∈ BOOL ∧ canWithdraw = TRUE"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="withdrawalState(pc1) ≔ Approved" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="markAsDeleted ≔ markAsDeleted ∪ {pc1}" org.eventb.core.label="act2"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RejectWithdrawal ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="RejectWithdrawal ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="pc1"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="canWithdraw"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalApprover"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(withdrawalState) ∧ withdrawalState(pc1) = Void"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="canWithdraw ∈ BOOL ∧ canWithdraw = FALSE"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="withdrawalState(pc1) ≔ Rejected" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CreatePortable ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CreatePortable ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="p"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalStaff"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ dom(pc) ∧ c ∈ ran(pc) ∧ {p ↦ c} ∉ dom(portableState)"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="portableState({p ↦ c}) ≔ Void" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="portableState  {{p ↦ c} ↦ Void} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ApprovePortable ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ApprovePortable ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="pc1"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="canPortable"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalApprover"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(portableState) ∧ portableState(pc1) = Void"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="portableState  {pc1 ↦ Approved} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="portableState(pc1) ≔ Approved" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="canPortable ∈ BOOL ∧ canPortable = TRUE"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RejectPortable ≡">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="RejectPortable ≡"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="pc1"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="canPortable"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalApprover"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(portableState) ∧ portableState(pc1) = Void"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="portableState  {pc1 ↦ Rejected} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="portableState(pc1) ≔ Rejected" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="canPortable ∈ BOOL ∧ canPortable = FALSE"/>
-    </org.eventb.core.event>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" version="5">
     <org.eventb.core.refinesMachine name="T" org.eventb.core.target="PASM_Machine"/>
-    <org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DeletePatientData ≡">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="s"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalStaff"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(consentRenewalState) ∧ consentRenewalState(pc1) = Rejected"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="pc1 ⊆ markAsReceived ∧ pc1 ∈ dom(isConsentExpired)∧ isConsentExpired(pc1) = TRUE"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="markAsDeleted ∩ {pc1} = ∅"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="markAsDeleted ≔ markAsDeleted ∪ {pc1}" org.eventb.core.label="act1"/>
-        <org.eventb.core.parameter name="/" org.eventb.core.identifier="pc1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.invariant name="W" org.eventb.core.label="inv4" org.eventb.core.predicate="isConsentExpired ∈ (PATIENTS ↔ CONSENTS) ⤔ BOOL"/>
-    <org.eventb.core.invariant name="X" org.eventb.core.label="inv5" org.eventb.core.predicate="markAsDeleted ⊆ PATIENTS ↔ CONSENTS"/>
-    <org.eventb.core.invariant name="Y" org.eventb.core.label="inv6" org.eventb.core.predicate="markAsReceived ∈ PATIENTS ↔ CONSENTS"/>
-    <org.eventb.core.invariant name="Z" org.eventb.core.label="inv7" org.eventb.core.predicate="consentRenewalState ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
+    <org.eventb.core.seesContext name=")" org.eventb.core.target="Consent_Context"/>
     <org.eventb.core.seesContext name="q" org.eventb.core.target="Konteks_Test"/>
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="sessions ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="userRoles ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="pc ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="patients ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="crf ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="queries ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act6"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="pf ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act7"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="authorizedConsent ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act8"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="withdrawalState ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act9"/>
+        <org.eventb.core.action name="5" org.eventb.core.assignment="markAsDeleted ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act10"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="portableState ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act11"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="isConsentExpired ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act12"/>
+        <org.eventb.core.action name="3" org.eventb.core.assignment="markAsReceived ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act13"/>
+        <org.eventb.core.action name="4" org.eventb.core.assignment="consentRenewalState ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act14"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="p" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="+ login(username; String, password; String); boolean">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Login ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="u"/>
+        <org.eventb.core.guard name="*" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ SESSIONS ∧ s ∉ dom(sessions)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="u ∈ AUTHORIZED_USERS ∧ u ∉ ran(sessions)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="sessions ∪ {s ↦ u} ∈ SESSIONS ⤔ AUTHORIZED_USERS"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="sessions ≔ sessions ∪ {s ↦ u}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="o" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="Logout ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Logout ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.guard name=")" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions)"/>
+        <org.eventb.core.guard name="*" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="{sessions(s)} ⩤ queries ∈ AUTHORIZED_USERS ⇸ (QUERIES ↔ PATIENTS)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="{sessions(s)} ⩤ authorizedConsent ∈ AUTHORIZED_USERS ⇸ (PATIENTS ↔ CONSENTS)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="{sessions(s)} ⩤ pf ∈ AUTHORIZED_USERS ⇸ (PATIENTS ↔ FIELDS)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="sessions ⩥ {sessions(s)} ∈ SESSIONS ⤔ AUTHORIZED_USERS"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="queries ≔ {sessions(s)} ⩤ queries" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="authorizedConsent ≔ {sessions(s)} ⩤ authorizedConsent" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="pf ≔ {sessions(s)} ⩤ pf" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="sessions ≔ sessions ⩥ {sessions(s)}" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="n" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="AddConsent ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AddConsent ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="p"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = NursingStaff"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ patients ∧ c ∈ dom(crf)"/>
+        <org.eventb.core.guard name="." org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="p ↦ c ∉ pc"/>
+        <org.eventb.core.guard name="/" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="pc ∪ {p ↦ c} ∈ PATIENTS ↔ CONSENTS"/>
+        <org.eventb.core.guard name="0" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="sessions(s) ∉ dom(queries)"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="pc ≔ pc ∪ {p ↦ c}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="m" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="AddPatient ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AddPatient ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="p"/>
+        <org.eventb.core.guard name="*" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = NursingStaff"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ PATIENTS ∧ p ∉ patients"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="sessions(s) ∉ dom(queries)"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="patients ≔ patients ∪ {p}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="l" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CreateInquiry ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CreateInquiry ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="p"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="q"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="q ∈ QUERIES ∧ p ∈ dom(pc) ∧ sessions(s) ∉ dom(queries)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="queries  {sessions(s) ↦ {q ↦ p}} ∈ AUTHORIZED_USERS ⇸ (QUERIES ↔ PATIENTS)"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="queries(sessions(s)) ≔ {q ↦ p}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="k" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CheckAuthorizeConsent ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CheckAuthorizeConsent ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="p"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.generated="false" org.eventb.core.identifier="consentExpired"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(queries)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="consentExpired ∈ BOOL ∧ consentExpired = FALSE"/>
+        <org.eventb.core.guard name="." org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="c ∈ pc[{p}] ∧ c ∈ dom(crf)"/>
+        <org.eventb.core.guard name="/" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r ∈ dom(crf(c))"/>
+        <org.eventb.core.guard name="0" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="sessions(s) ∉ dom(authorizedConsent)"/>
+        <org.eventb.core.guard name="1" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="authorizedConsent  {sessions(s) ↦ {p ↦ c}} ∈ AUTHORIZED_USERS ⇸ (PATIENTS ↔ CONSENTS)"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="authorizedConsent(sessions(s)) ≔ {p ↦ c}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="j" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ExecuteQuery ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ExecuteQuery ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="p"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(queries)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="p ∈ ran(queries(sessions(s))) ∧ c ∈ dom(crf)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="sessions(s) ∈ dom(authorizedConsent) ∧ p ↦ c ∈ authorizedConsent(sessions(s))"/>
+        <org.eventb.core.guard name="." org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="sessions(s) ∉ dom(pf)"/>
+        <org.eventb.core.guard name="/" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="pf  {sessions(s) ↦ {p} × ran(userRoles[sessions[{s}]] ◁ crf(c))} ∈ AUTHORIZED_USERS ⇸ (PATIENTS ↔ FIELDS)"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="pf(sessions(s)) ≔ {p} × ran(userRoles[sessions[{s}]] ◁ crf(c))" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="*" org.eventb.core.generated="false" org.eventb.core.identifier="sessions"/>
+    <org.eventb.core.variable name="+" org.eventb.core.generated="false" org.eventb.core.identifier="userRoles"/>
+    <org.eventb.core.variable name="," org.eventb.core.generated="false" org.eventb.core.identifier="pc"/>
+    <org.eventb.core.variable name="-" org.eventb.core.generated="false" org.eventb.core.identifier="patients"/>
+    <org.eventb.core.invariant name="." org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="sessions ∈ SESSIONS ⤔ AUTHORIZED_USERS"/>
+    <org.eventb.core.invariant name="/" org.eventb.core.generated="false" org.eventb.core.label="inv2" org.eventb.core.predicate="userRoles ∈ AUTHORIZED_USERS ↔ ROLES"/>
+    <org.eventb.core.invariant name="0" org.eventb.core.generated="false" org.eventb.core.label="inv3" org.eventb.core.predicate="pc ∈ PATIENTS ↔ CONSENTS"/>
+    <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CreateConsentRenewalRequest ≡">
+        <org.eventb.core.parameter name="'" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="p"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalStaff"/>
+        <org.eventb.core.guard name="." org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ dom(pc) ∧ c ∈ ran(pc) ∧ {p ↦ c} ∉ dom(consentRenewalState)"/>
+        <org.eventb.core.guard name="/" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="expired ∈ BOOL ∧ expired = TRUE"/>
+        <org.eventb.core.guard name="0" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="isWithdrawn ∈ BOOL ∧ isWithdrawn = FALSE"/>
+        <org.eventb.core.guard name="1" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="consentRenewalState  {{p ↦ c} ↦ Void} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
+        <org.eventb.core.action name="3" org.eventb.core.assignment="consentRenewalState({p ↦ c}) ≔ Void" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="4" org.eventb.core.assignment="isConsentExpired({p ↦ c}) ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="5" org.eventb.core.generated="false" org.eventb.core.label="grd7" org.eventb.core.predicate="isConsentExpired  {{p ↦ c} ↦ TRUE} ∈ (PATIENTS ↔ CONSENTS) ⤔ BOOL"/>
+        <org.eventb.core.parameter name="6" org.eventb.core.generated="false" org.eventb.core.identifier="expired"/>
+        <org.eventb.core.parameter name="7" org.eventb.core.generated="false" org.eventb.core.identifier="isWithdrawn"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="NotifyPatient ≡">
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="pc1"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="acceptStatus"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalStaff"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ⊆ markAsReceived ∧ pc1 ∈ dom(consentRenewalState) ∧ consentRenewalState(pc1) = Void"/>
+        <org.eventb.core.guard name="." org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="acceptStatus ∈ STATUSES∖{Void}"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="consentRenewalState(pc1) ≔ acceptStatus" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="markAsReceived ≔ markAsReceived ∪ pc1" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="2" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="consentRenewalState  {pc1 ↦ acceptStatus} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ExtendConsentExpiration ≡">
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="pc1"/>
+        <org.eventb.core.guard name="*" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalStaff"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(consentRenewalState) ∧ consentRenewalState(pc1) = Approved"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="pc1 ⊆ markAsReceived ∧ pc1 ∈ dom(isConsentExpired) ∧ isConsentExpired(pc1) = TRUE"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="isConsentExpired(pc1) ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="2" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="isConsentExpired  {pc1 ↦ FALSE} ∈ (PATIENTS ↔ CONSENTS) ⤔ BOOL"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="@" org.eventb.core.generated="false" org.eventb.core.identifier="crf"/>
+    <org.eventb.core.variable name="A" org.eventb.core.generated="false" org.eventb.core.identifier="queries"/>
+    <org.eventb.core.variable name="B" org.eventb.core.generated="false" org.eventb.core.identifier="pf"/>
+    <org.eventb.core.variable name="F" org.eventb.core.generated="false" org.eventb.core.identifier="withdrawalState"/>
+    <org.eventb.core.variable name="G" org.eventb.core.generated="false" org.eventb.core.identifier="markAsDeleted"/>
+    <org.eventb.core.variable name="V" org.eventb.core.generated="false" org.eventb.core.identifier="authorizedConsent"/>
+    <org.eventb.core.variable name="H" org.eventb.core.generated="false" org.eventb.core.identifier="portableState"/>
+    <org.eventb.core.variable name="J" org.eventb.core.generated="false" org.eventb.core.identifier="isConsentExpired"/>
+    <org.eventb.core.variable name="K" org.eventb.core.generated="false" org.eventb.core.identifier="markAsReceived"/>
+    <org.eventb.core.variable name="L" org.eventb.core.generated="false" org.eventb.core.identifier="consentRenewalState"/>
+    <org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CreateWithdrawal ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CreateWithdrawal ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="p"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalStaff"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ dom(pc) ∧ c ∈ ran(pc) ∧ {p ↦ c} ∉ dom(withdrawalState)"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="withdrawalState({p ↦ c}) ≔ Void" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ApproveWithdrawal ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ApproveWithdrawal ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="pc1"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="canWithdraw"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalApprover"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(withdrawalState) ∧ withdrawalState(pc1) = Void"/>
+        <org.eventb.core.guard name="." org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="canWithdraw ∈ BOOL ∧ canWithdraw = TRUE"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="withdrawalState(pc1) ≔ Approved" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="markAsDeleted ≔ markAsDeleted ∪ {pc1}" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="RejectWithdrawal ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="RejectWithdrawal ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="pc1"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="canWithdraw"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalApprover"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(withdrawalState) ∧ withdrawalState(pc1) = Void"/>
+        <org.eventb.core.guard name="." org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="canWithdraw ∈ BOOL ∧ canWithdraw = FALSE"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="withdrawalState(pc1) ≔ Rejected" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CreatePortable ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CreatePortable ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="p"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalStaff"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="p ∈ dom(pc) ∧ c ∈ ran(pc) ∧ {p ↦ c} ∉ dom(portableState)"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="portableState({p ↦ c}) ≔ Void" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="/" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="portableState  {{p ↦ c} ↦ Void} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ApprovePortable ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ApprovePortable ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="pc1"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="canPortable"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalApprover"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(portableState) ∧ portableState(pc1) = Void"/>
+        <org.eventb.core.guard name="." org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="portableState  {pc1 ↦ Approved} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="portableState(pc1) ≔ Approved" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="0" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="canPortable ∈ BOOL ∧ canPortable = TRUE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="RejectPortable ≡">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="RejectPortable ≡"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.generated="false" org.eventb.core.identifier="pc1"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.generated="false" org.eventb.core.identifier="canPortable"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[{sessions(s)}] ∧ r = LegalApprover"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(portableState) ∧ portableState(pc1) = Void"/>
+        <org.eventb.core.guard name="." org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="portableState  {pc1 ↦ Rejected} ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="portableState(pc1) ≔ Rejected" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="0" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="canPortable ∈ BOOL ∧ canPortable = FALSE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="DeletePatientData ≡">
+        <org.eventb.core.parameter name="'" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.guard name=")" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ dom(sessions) ∧ sessions(s) ∈ dom(userRoles)"/>
+        <org.eventb.core.guard name="*" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="∃r·r ∈ userRoles[sessions[{s}]] ∧ r = LegalStaff"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="pc1 ∈ dom(consentRenewalState) ∧ consentRenewalState(pc1) = Rejected"/>
+        <org.eventb.core.guard name="," org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="pc1 ⊆ markAsReceived ∧ pc1 ∈ dom(isConsentExpired)∧ isConsentExpired(pc1) = TRUE"/>
+        <org.eventb.core.guard name="-" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="markAsDeleted ∩ {pc1} = ∅"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="markAsDeleted ≔ markAsDeleted ∪ {pc1}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="/" org.eventb.core.generated="false" org.eventb.core.identifier="pc1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="W" org.eventb.core.generated="false" org.eventb.core.label="inv4" org.eventb.core.predicate="isConsentExpired ∈ (PATIENTS ↔ CONSENTS) ⤔ BOOL"/>
+    <org.eventb.core.invariant name="X" org.eventb.core.generated="false" org.eventb.core.label="inv5" org.eventb.core.predicate="markAsDeleted ⊆ PATIENTS ↔ CONSENTS"/>
+    <org.eventb.core.invariant name="Y" org.eventb.core.generated="false" org.eventb.core.label="inv6" org.eventb.core.predicate="markAsReceived ∈ PATIENTS ↔ CONSENTS"/>
+    <org.eventb.core.invariant name="Z" org.eventb.core.generated="false" org.eventb.core.label="inv7" org.eventb.core.predicate="consentRenewalState ∈ (PATIENTS ↔ CONSENTS) ⤔ STATUSES"/>
+    <ac.soton.eventb.emf.core.extension.persistence.serialisedExtension ac.soton.eventb.emf.core.extension.persistence.eClassifier="Classdiagram" ac.soton.eventb.emf.core.extension.persistence.ePackageURI="http://soton.ac.uk/models/eventb/classdiagrams/2020" ac.soton.eventb.emf.core.extension.persistence.extensionId="ac.soton.eventb.classdiagrams._fa17MLujEfCCuvb9phMJGg" ac.soton.eventb.emf.core.extension.persistence.serialised="&lt;classdiagrams:Classdiagram xmi:version=&quot;2.0&quot; xmlns:xmi=&quot;http://www.omg.org/XMI&quot; xmlns:classdiagrams=&quot;http://soton.ac.uk/models/eventb/classdiagrams/2020&quot; name=&quot;_v92CMLudEfCCuvb9phMJGg&quot; extensionId=&quot;ac.soton.eventb.classdiagrams._fa17MLujEfCCuvb9phMJGg&quot;&gt;&#13;&#10;  &lt;annotations source=&quot;http:///org/eventb/core/RodinInternalAnnotations&quot;&gt;&#13;&#10;    &lt;details key=&quot;name&quot; value=&quot;_v92CMLudEfCCuvb9phMJGg&quot;/&gt;&#13;&#10;  &lt;/annotations&gt;&#13;&#10;  &lt;attributes key=&quot;ac.soton.eventb.emf.core.extension.persistence.eClassifier&quot;&gt;&#13;&#10;    &lt;value type=&quot;String&quot; value=&quot;ACED000574000C436C6173736469616772616D&quot;/&gt;&#13;&#10;  &lt;/attributes&gt;&#13;&#10;  &lt;attributes key=&quot;ac.soton.eventb.emf.core.extension.persistence.ePackageURI&quot;&gt;&#13;&#10;    &lt;value type=&quot;String&quot; value=&quot;ACED0005740033687474703A2F2F736F746F6E2E61632E756B2F6D6F64656C732F6576656E74622F636C6173736469616772616D732F32303230&quot;/&gt;&#13;&#10;  &lt;/attributes&gt;&#13;&#10;  &lt;attributes key=&quot;ac.soton.eventb.emf.core.extension.persistence.extensionId&quot;&gt;&#13;&#10;    &lt;value type=&quot;String&quot; value=&quot;ACED000574003561632E736F746F6E2E6576656E74622E636C6173736469616772616D732E5F5762396A594C7564456643437576623970684D4A4767&quot;/&gt;&#13;&#10;  &lt;/attributes&gt;&#13;&#10;&lt;/classdiagrams:Classdiagram&gt;&#13;&#10;" name="_v92CMLudEfCCuvb9phMJGg" org.eventb.core.generated="false"/>
+    <ac.soton.eventb.emf.core.extension.persistence.serialisedExtension ac.soton.eventb.emf.core.extension.persistence.eClassifier="Classdiagram" ac.soton.eventb.emf.core.extension.persistence.ePackageURI="http://soton.ac.uk/models/eventb/classdiagrams/2020" ac.soton.eventb.emf.core.extension.persistence.extensionId="ac.soton.eventb.classdiagrams._Wb9jYLudEfCCuvb9phMJGg" ac.soton.eventb.emf.core.extension.persistence.serialised="&lt;classdiagrams:Classdiagram xmi:version=&quot;2.0&quot; xmlns:xmi=&quot;http://www.omg.org/XMI&quot; xmlns:classdiagrams=&quot;http://soton.ac.uk/models/eventb/classdiagrams/2020&quot; name=&quot;Consent Management Service Model&quot; extensionId=&quot;ac.soton.eventb.classdiagrams._Wb9jYLudEfCCuvb9phMJGg&quot;&gt;&#13;&#10;  &lt;annotations source=&quot;http:///org/eventb/core/RodinInternalAnnotations&quot;&gt;&#13;&#10;    &lt;details key=&quot;name&quot; value=&quot;_v92CMLudEfCCuvb9phMJGg&quot;/&gt;&#13;&#10;  &lt;/annotations&gt;&#13;&#10;  &lt;classes name=&quot;DataSubject&quot;/&gt;&#13;&#10;  &lt;classes name=&quot;AuthorizedUser&quot;&gt;&#13;&#10;    &lt;statemachines extensionId=&quot;ac.soton.eventb.statemachines._xDEoELuhEfCCuvb9phMJGg&quot;/&gt;&#13;&#10;    &lt;methods internalId=&quot;_UYfaULueEfCCuvb9phMJGg&quot; elaborates=&quot;platform:/resource/GDPR_CMS/CRSM_Machine.bum#http://emf.eventb.org/models/core/machine/2014::Event::CRSM_Machine.+ login(username; String, password; String); boolean&quot;&gt;&#13;&#10;      &lt;parameters comment=&quot;&quot; name=&quot;username&quot; type=&quot;String&quot;/&gt;&#13;&#10;      &lt;parameters comment=&quot;&quot; name=&quot;password&quot; type=&quot;String&quot;/&gt;&#13;&#10;      &lt;parameters comment=&quot;&quot; type=&quot;boolean&quot;/&gt;&#13;&#10;    &lt;/methods&gt;&#13;&#10;    &lt;methods internalId=&quot;_by4vUrueEfCCuvb9phMJGg&quot; elaborates=&quot;platform:/resource/GDPR_CMS/CRSM_Machine.bum#http://emf.eventb.org/models/core/machine/2014::Event::CRSM_Machine.Logout ≡&quot;/&gt;&#13;&#10;  &lt;/classes&gt;&#13;&#10;  &lt;classes name=&quot;Role&quot;/&gt;&#13;&#10;  &lt;classes name=&quot;Consent&quot;/&gt;&#13;&#10;  &lt;classes name=&quot;Session&quot;/&gt;&#13;&#10;  &lt;classes name=&quot;DataField&quot;/&gt;&#13;&#10;  &lt;classes name=&quot;DataValue&quot;/&gt;&#13;&#10;  &lt;classes name=&quot;Query&quot;/&gt;&#13;&#10;  &lt;classes name=&quot;DataSubjectConsent&quot;/&gt;&#13;&#10;  &lt;classes name=&quot;ConsentRoleField&quot;/&gt;&#13;&#10;  &lt;classes name=&quot;ConsentAccessPolicy&quot;/&gt;&#13;&#10;&lt;/classdiagrams:Classdiagram&gt;&#13;&#10;" name="_pjzIMLujEfCCuvb9phMJGg" org.eventb.core.generated="false"/>
 </org.eventb.core.machineFile>

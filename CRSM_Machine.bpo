@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="5">
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="FIELDS" org.eventb.core.type="ℙ(FIELDS)"/>
         <org.eventb.core.poIdentifier name="AUTHORIZED_USERS" org.eventb.core.type="ℙ(AUTHORIZED_USERS)"/>
@@ -122,13 +122,13 @@
         <org.eventb.core.poIdentifier name="consentRenewalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatf" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatf" org.eventb.core.poStamp="0"/>
-    <org.eventb.core.poSequent name="Login ≡/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="+ login(username; String, password; String); boolean/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPconsentRenewalStatg"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="sessions∪{s ↦ u}∈SESSIONS ⤔ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.invariant#."/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOgx"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#p"/>
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.invariant#."/>
-        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poSequent#Login ≡\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poSequent#+ login(username; String, password; String); boolean\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
     </org.eventb.core.poSequent>
     <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatg" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
@@ -207,7 +207,7 @@
         <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PATIENTS"/>
         <org.eventb.core.poIdentifier name="consentExpired" org.eventb.core.type="BOOL"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatl" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatl" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatl" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatl" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(queries)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#k|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="consentExpired∈BOOL∧consentExpired=FALSE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#k|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c∈pc[{p}]∧c∈dom(crf)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#k|org.eventb.core.guard#."/>
@@ -215,26 +215,26 @@
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="sessions(s)∉dom(authorizedConsent)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#k|org.eventb.core.guard#0"/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="authorizedConsent{sessions(s) ↦ {p ↦ c}}∈AUTHORIZED_USERS ⇸ (PATIENTS ↔ CONSENTS)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#k|org.eventb.core.guard#1"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatm" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatm" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CONSENTS"/>
         <org.eventb.core.poIdentifier name="pf'" org.eventb.core.type="ℙ(AUTHORIZED_USERS×ℙ(PATIENTS×FIELDS))"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PATIENTS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatm" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatm" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatm" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatm" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(queries)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#j|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈ran(queries(sessions(s)))∧c∈dom(crf)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#j|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="sessions(s)∈dom(authorizedConsent)∧p ↦ c∈authorizedConsent(sessions(s))" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#j|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="sessions(s)∉dom(pf)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#j|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="pf{sessions(s) ↦ {p} × ran(userRoles[sessions[{s}]] ◁ crf(c))}∈AUTHORIZED_USERS ⇸ (PATIENTS ↔ FIELDS)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#j|org.eventb.core.guard#\/"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="CreateConsentRenewalRequest ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="CreateConsentRenewalRequest ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatn"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#1|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#1|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatn"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="CreateConsentRenewalRequest ≡/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="CreateConsentRenewalRequest ≡/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPconsentRenewalStatn"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isConsentExpired{{p ↦ c} ↦ TRUE}∈(PATIENTS ↔ CONSENTS) ⤔ BOOL" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.invariant#W"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#1"/>
@@ -242,7 +242,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poSequent#CreateConsentRenewalRequest ≡\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="CreateConsentRenewalRequest ≡/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="CreateConsentRenewalRequest ≡/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPconsentRenewalStatn"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="consentRenewalState{{p ↦ c} ↦ Void}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.invariant#Z"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#1"/>
@@ -250,7 +250,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poSequent#CreateConsentRenewalRequest ≡\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatn" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatn" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CONSENTS"/>
         <org.eventb.core.poIdentifier name="expired" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="isConsentExpired'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×BOOL)"/>
@@ -259,7 +259,7 @@
         <org.eventb.core.poIdentifier name="consentRenewalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
         <org.eventb.core.poIdentifier name="isWithdrawn" org.eventb.core.type="BOOL"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatn" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatn" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatn" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatn" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#1|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[sessions[{s}]]∧r=LegalStaff" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#1|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈dom(pc)∧c∈ran(pc)∧{p ↦ c}∉dom(consentRenewalState)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#1|org.eventb.core.guard#."/>
@@ -268,19 +268,19 @@
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="consentRenewalState{{p ↦ c} ↦ Void}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#1|org.eventb.core.guard#1"/>
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="isConsentExpired{{p ↦ c} ↦ TRUE}∈(PATIENTS ↔ CONSENTS) ⤔ BOOL" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#1|org.eventb.core.guard#5"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="NotifyPatient ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="NotifyPatient ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStato"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#2|org.eventb.core.guard#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#2|org.eventb.core.guard#+"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStato"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="NotifyPatient ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="NotifyPatient ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStato("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1⊆markAsReceived∧pc1∈dom(consentRenewalState)⇒consentRenewalState∈ℙ(PATIENTS × CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#2|org.eventb.core.guard#-"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#2|org.eventb.core.guard#-"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStato("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="NotifyPatient ≡/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="NotifyPatient ≡/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPconsentRenewalStato"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="consentRenewalState{pc1 ↦ acceptStatus}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.invariant#Z"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#2"/>
@@ -288,41 +288,41 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poSequent#NotifyPatient ≡\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStato" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStato" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="acceptStatus" org.eventb.core.type="STATUSES"/>
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="markAsReceived'" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="consentRenewalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStato(" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStato" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStato(" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStato" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#2|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[sessions[{s}]]∧r=LegalStaff" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#2|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStato" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStato(" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStato" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStato(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1⊆markAsReceived∧pc1∈dom(consentRenewalState)∧consentRenewalState(pc1)=Void" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#2|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="acceptStatus∈STATUSES ∖ {Void}" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#2|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="consentRenewalState{pc1 ↦ acceptStatus}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#2|org.eventb.core.guard#2"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ExtendConsentExpiration ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="ExtendConsentExpiration ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatp"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#3|org.eventb.core.guard#*"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#3|org.eventb.core.guard#*"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatp"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ExtendConsentExpiration ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="ExtendConsentExpiration ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatp("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1∈dom(consentRenewalState)⇒consentRenewalState∈ℙ(PATIENTS × CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#3|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#3|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatp("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ExtendConsentExpiration ≡/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="ExtendConsentExpiration ≡/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatp)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1⊆markAsReceived∧pc1∈dom(isConsentExpired)⇒isConsentExpired∈ℙ(PATIENTS × CONSENTS) ⇸ BOOL" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#3|org.eventb.core.guard#-"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#3|org.eventb.core.guard#-"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatp)"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ExtendConsentExpiration ≡/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="ExtendConsentExpiration ≡/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPconsentRenewalStatp"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isConsentExpired{pc1 ↦ FALSE}∈(PATIENTS ↔ CONSENTS) ⤔ BOOL" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.invariant#W"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#3"/>
@@ -330,7 +330,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poSequent#ExtendConsentExpiration ≡\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatp" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatp" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="isConsentExpired'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×BOOL)"/>
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
@@ -342,34 +342,34 @@
     <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatp)" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatp(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1∈dom(consentRenewalState)∧consentRenewalState(pc1)=Approved" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#3|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatp" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatp)" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatp" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatp)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="pc1⊆markAsReceived∧pc1∈dom(isConsentExpired)∧isConsentExpired(pc1)=TRUE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#3|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="isConsentExpired{pc1 ↦ FALSE}∈(PATIENTS ↔ CONSENTS) ⤔ BOOL" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#3|org.eventb.core.guard#2"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatq" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatq" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CONSENTS"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PATIENTS"/>
         <org.eventb.core.poIdentifier name="withdrawalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatq" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatq" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatq" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatq" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#N|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[{sessions(s)}]∧r=LegalStaff" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#N|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈dom(pc)∧c∈ran(pc)∧{p ↦ c}∉dom(withdrawalState)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#N|org.eventb.core.guard#-"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatr("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#O|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#O|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatr("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatr)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1∈dom(withdrawalState)⇒withdrawalState∈ℙ(PATIENTS × CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#O|org.eventb.core.guard#-"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#O|org.eventb.core.guard#-"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatr)"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPconsentRenewalStatr"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[sessions[{s}]]∧r=LegalApprover" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#:"/>
@@ -377,7 +377,7 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#O"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poSequent#ApproveWithdrawal ≡\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatr" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatr" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="markAsDeleted'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS))"/>
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
@@ -390,29 +390,29 @@
     <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatr)" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatr(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[{sessions(s)}]∧r=LegalApprover" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#O|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatr" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatr)" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatr" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatr)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1∈dom(withdrawalState)∧withdrawalState(pc1)=Void" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#O|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="canWithdraw∈BOOL∧canWithdraw=TRUE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#O|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStats" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStats" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="canWithdraw" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="withdrawalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStats" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStats" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStats" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStats" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#P|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[{sessions(s)}]∧r=LegalApprover" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#P|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1∈dom(withdrawalState)∧withdrawalState(pc1)=Void" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#P|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="canWithdraw∈BOOL∧canWithdraw=FALSE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#P|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="CreatePortable ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="CreatePortable ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatt("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#Q|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#Q|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatt("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="CreatePortable ≡/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="CreatePortable ≡/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPconsentRenewalStatt"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[sessions[{s}]]∧r=LegalStaff" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#,|org.eventb.core.guard#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#,"/>
@@ -420,33 +420,33 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#Q"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poSequent#CreatePortable ≡\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatt" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatt" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="portableState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CONSENTS"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PATIENTS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatt(" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatt" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatt(" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatt" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#Q|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatt" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatt(" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatt" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatt(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[{sessions(s)}]∧r=LegalStaff" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#Q|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈dom(pc)∧c∈ran(pc)∧{p ↦ c}∉dom(portableState)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#Q|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="portableState{{p ↦ c} ↦ Void}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#Q|org.eventb.core.guard#\/"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ApprovePortable ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="ApprovePortable ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatu("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#R|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#R|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatu("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ApprovePortable ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="ApprovePortable ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatu)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1∈dom(portableState)⇒portableState∈ℙ(PATIENTS × CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#R|org.eventb.core.guard#-"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#R|org.eventb.core.guard#-"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatu)"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ApprovePortable ≡/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="ApprovePortable ≡/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPconsentRenewalStatu"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[sessions[{s}]]∧r=LegalApprover" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-|org.eventb.core.guard#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-"/>
@@ -460,30 +460,30 @@
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatu(" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatu" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatu(" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatu" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#R|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatu)" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatu(" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatu)" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatu(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[{sessions(s)}]∧r=LegalApprover" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#R|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatu" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatu)" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatu" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatu)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1∈dom(portableState)∧portableState(pc1)=Void" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#R|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="portableState{pc1 ↦ Approved}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#R|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="canPortable∈BOOL∧canPortable=TRUE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#R|org.eventb.core.guard#0"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="RejectPortable ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="RejectPortable ≡/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatv("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#S|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#S|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatv("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RejectPortable ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="RejectPortable ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatv)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1∈dom(portableState)⇒portableState∈ℙ(PATIENTS × CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#S|org.eventb.core.guard#-"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#S|org.eventb.core.guard#-"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatv)"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RejectPortable ≡/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="RejectPortable ≡/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPconsentRenewalStatv"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[sessions[{s}]]∧r=LegalApprover" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#.|org.eventb.core.guard#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#."/>
@@ -491,42 +491,42 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#S"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poSequent#RejectPortable ≡\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatv" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTIDENTconsentRenewalStatv" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="portableState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
         <org.eventb.core.poIdentifier name="canPortable" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatv(" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatv" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatv(" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatv" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#S|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatv)" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatv(" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTHYPconsentRenewalStatv)" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatv(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[{sessions(s)}]∧r=LegalApprover" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#S|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatv" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatv)" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPconsentRenewalStatv" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatv)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1∈dom(portableState)∧portableState(pc1)=Void" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#S|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="portableState{pc1 ↦ Rejected}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#S|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="canPortable∈BOOL∧canPortable=FALSE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#S|org.eventb.core.guard#0"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="DeletePatientData ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="DeletePatientData ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatw"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#U|org.eventb.core.guard#)"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#U|org.eventb.core.guard#)"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTIDENTconsentRenewalStatw"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="DeletePatientData ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="DeletePatientData ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatw("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1∈dom(consentRenewalState)⇒consentRenewalState∈ℙ(PATIENTS × CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#U|org.eventb.core.guard#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#U|org.eventb.core.guard#+"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatw("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="DeletePatientData ≡/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="DeletePatientData ≡/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatw)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1⊆markAsReceived∧pc1∈dom(isConsentExpired)⇒isConsentExpired∈ℙ(PATIENTS × CONSENTS) ⇸ BOOL" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#U|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#U|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTHYPconsentRenewalStatw)"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="DeletePatientData ≡/markAsDeleted/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="5">
+    <org.eventb.core.poSequent name="DeletePatientData ≡/markAsDeleted/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/CRSM_Machine.bpo|org.eventb.core.poFile#CRSM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPconsentRenewalStatw"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="markAsDeleted∪{pc1}=markAsDeleted" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#U|org.eventb.core.action#."/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GDPR_CMS/CRSM_Machine.bum|org.eventb.core.machineFile#CRSM_Machine|org.eventb.core.event#U"/>

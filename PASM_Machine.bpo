@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="FIELDS" org.eventb.core.type="ℙ(FIELDS)"/>
         <org.eventb.core.poIdentifier name="AUTHORIZED_USERS" org.eventb.core.type="ℙ(AUTHORIZED_USERS)"/>
@@ -198,71 +198,20 @@
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="sessions(s)∉dom(authorizedConsent)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg}|org.eventb.core.guard#0"/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="authorizedConsent{sessions(s) ↦ {p ↦ c}}∈AUTHORIZED_USERS ⇸ (PATIENTS ↔ CONSENTS)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg}|org.eventb.core.guard#1"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ExecuteQuery ≡/grd1/WD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsen\|"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#+"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#+"/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsen\|"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ExecuteQuery ≡/grd2/WD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|("/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS∧sessions(s)∈dom(queries)∧queries∈AUTHORIZED_USERS ⇸ ℙ(QUERIES × PATIENTS)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#,"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#,"/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|("/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ExecuteQuery ≡/grd3/WD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|)"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS∧(sessions(s)∈dom(authorizedConsent)⇒authorizedConsent∈AUTHORIZED_USERS ⇸ ℙ(PATIENTS × CONSENTS))" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#-"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#-"/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|)"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ExecuteQuery ≡/grd4/WD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|*"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#."/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#."/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|*"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ExecuteQuery ≡/grd5/WD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|+"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS∧c∈dom(crf)∧crf∈CONSENTS ⇸ ℙ(ROLES × FIELDS)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#\/"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#\/"/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|+"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ExecuteQuery ≡/act1/WD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="2">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConsen\|"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)∧sessions∈SESSIONS ⇸ AUTHORIZED_USERS∧c∈dom(crf)∧crf∈CONSENTS ⇸ ℙ(ROLES × FIELDS)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.action#0"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.action#0"/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConsen\|"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ExecuteQuery ≡/pf/EQL" org.eventb.core.accurate="false" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="2">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConsen\|"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pf{sessions(s) ↦ {p} × ran(userRoles[sessions[{s}]] ◁ crf(c))}=pf" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.action#0"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GDPR_CMS/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#_AwstsLrVEfCLvJ2KVKwOh)"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~"/>
-        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poSequent#ExecuteQuery ≡\/pf\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsen|" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsen|" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CONSENTS"/>
         <org.eventb.core.poIdentifier name="pf'" org.eventb.core.type="ℙ(AUTHORIZED_USERS×ℙ(PATIENTS×FIELDS))"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PATIENTS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsen|(" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsen\|" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsen|" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsen\|" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(queries)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#+"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsen|)" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈ran(queries(sessions(s)))∧c∈dom(crf)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#,"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsen|*" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="sessions(s)∈dom(authorizedConsent)∧p ↦ c∈authorizedConsent(sessions(s))" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#-"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConsen|+" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|*" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="sessions(s)∉dom(pf)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#."/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsen|" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConsen\|+" org.eventb.core.poStamp="2">
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="pf{sessions(s) ↦ {p} × ran(userRoles[sessions[{s}]] ◁ crf(c))}∈AUTHORIZED_USERS ⇸ (PATIENTS ↔ FIELDS)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#_yby5ILreEfCLvJ2KVKwOg~|org.eventb.core.guard#\/"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="CreateWithdrawal ≡/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="CreateWithdrawal ≡/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConsen}"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="withdrawalState{{p ↦ c} ↦ Void}∈(PATIENTS ↔ CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.invariant#@"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GDPR_CMS/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#9"/>
@@ -271,19 +220,19 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poSequent#CreateWithdrawal ≡\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsen}" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsen}" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CONSENTS"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PATIENTS"/>
         <org.eventb.core.poIdentifier name="withdrawalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsen}" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsen}" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsen}" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsen}" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#=|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[{sessions(s)}]∧r=LegalStaff" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#=|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈dom(pc)∧c∈ran(pc)∧{p ↦ c}∉dom(withdrawalState)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#=|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="withdrawalState∪{{p ↦ c} ↦ Void}∈(PATIENTS ↔ CONSENTS) ↔ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#=|org.eventb.core.guard#\/"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="RejectWithdrawal ≡/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="RejectWithdrawal ≡/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConsen~"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="withdrawalState{pc1 ↦ Rejected}∈(PATIENTS ↔ CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.invariant#@"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GDPR_CMS/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#;"/>
@@ -292,20 +241,20 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poSequent#RejectWithdrawal ≡\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsen~" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConsen~" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="canWithdraw" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="withdrawalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsen~" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsen~" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConsen~" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConsen~" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[{sessions(s)}]∧r=LegalApprover" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#\/"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1∈dom(withdrawalState)∧withdrawalState(pc1)=Void" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#0"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="withdrawalState{pc1 ↦ Rejected}∈(PATIENTS ↔ CONSENTS) ↔ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#1"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="canWithdraw∈BOOL∧canWithdraw=FALSE" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#;|org.eventb.core.guard#2"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="ApproveWithdrawal ≡/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConseo'"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="withdrawalState{pc1 ↦ Approved}∈(PATIENTS ↔ CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.invariant#@"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GDPR_CMS/WASM_Machine.bum|org.eventb.core.machineFile#WASM_Machine|org.eventb.core.event#:"/>
@@ -314,14 +263,14 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poSequent#ApproveWithdrawal ≡\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConseo'" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConseo'" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="markAsDeleted'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS))"/>
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="canWithdraw" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="withdrawalState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConseo'" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo'" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConseo'" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo'" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[sessions[{s}]]∧r=LegalApprover" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1∈dom(withdrawalState)∧withdrawalState(pc1)=Void" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#0"/>
@@ -329,13 +278,13 @@
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="canWithdraw∈BOOL∧canWithdraw=TRUE" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#2"/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="canWithdraw∈BOOL∧canWithdraw=TRUE" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#:|org.eventb.core.guard#3"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="CreatePortable ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="CreatePortable ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#,|org.eventb.core.guard#*"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#,|org.eventb.core.guard#*"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="CreatePortable ≡/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="CreatePortable ≡/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConseo("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="portableState{{p ↦ c} ↦ Void}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.invariant#&gt;"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#,"/>
@@ -343,31 +292,31 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poSequent#CreatePortable ≡\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConseo(" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTIDENTauthorizedConseo(" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="portableState'" org.eventb.core.type="ℙ(ℙ(PATIENTS×CONSENTS)×STATUSES)"/>
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CONSENTS"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
         <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PATIENTS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConseo(" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo(" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConseo(" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#,|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[sessions[{s}]]∧r=LegalStaff" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#,|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈dom(pc)∧c∈ran(pc)∧{p ↦ c}∉dom(portableState)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#,|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="portableState{{p ↦ c} ↦ Void}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#,|org.eventb.core.guard#-"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ApprovePortable ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="ApprovePortable ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-|org.eventb.core.guard#*"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-|org.eventb.core.guard#*"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo)"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ApprovePortable ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="ApprovePortable ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConseo)("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1∈dom(portableState)⇒portableState∈ℙ(PATIENTS × CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConseo)("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ApprovePortable ≡/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="ApprovePortable ≡/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConseo)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="portableState{pc1 ↦ Approved}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.invariant#&gt;"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-"/>
@@ -381,28 +330,28 @@
         <org.eventb.core.poIdentifier name="pc1" org.eventb.core.type="ℙ(PATIENTS×CONSENTS)"/>
         <org.eventb.core.poIdentifier name="s" org.eventb.core.type="SESSIONS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConseo)(" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo)" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTHYPauthorizedConseo)(" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo)" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(sessions)∧sessions(s)∈dom(userRoles)" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∃r⦂ROLES·r∈userRoles[sessions[{s}]]∧r=LegalApprover" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConseo)" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConseo)(" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauthorizedConseo)" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConseo)(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pc1∈dom(portableState)∧portableState(pc1)=Void" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="portableState{pc1 ↦ Approved}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="canPortable∈BOOL∧canPortable=TRUE" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#-|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="RejectPortable ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="RejectPortable ≡/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo*"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(sessions)⇒sessions∈SESSIONS ⇸ AUTHORIZED_USERS" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#.|org.eventb.core.guard#*"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#.|org.eventb.core.guard#*"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTIDENTauthorizedConseo*"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RejectPortable ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="RejectPortable ≡/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConseo*("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc1∈dom(portableState)⇒portableState∈ℙ(PATIENTS × CONSENTS) ⇸ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#.|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#.|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTHYPauthorizedConseo*("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RejectPortable ≡/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="RejectPortable ≡/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GDPR_CMS/PASM_Machine.bpo|org.eventb.core.poFile#PASM_Machine|org.eventb.core.poPredicateSet#EVTALLHYPauthorizedConseo*"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="portableState{pc1 ↦ Rejected}∈(PATIENTS ↔ CONSENTS) ⤔ STATUSES" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.invariant#&gt;"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GDPR_CMS/PASM_Machine.bum|org.eventb.core.machineFile#PASM_Machine|org.eventb.core.event#."/>

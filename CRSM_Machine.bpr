@@ -9645,4 +9645,13 @@
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="+ login(username; String, password; String); boolean/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="AUTHORIZED_USERS,SESSIONS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+        <org.eventb.core.prIdent name="s" org.eventb.core.type="SESSIONS"/>
+        <org.eventb.core.prIdent name="sessions" org.eventb.core.type="ℙ(SESSIONS×AUTHORIZED_USERS)"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="AUTHORIZED_USERS"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="sessions∪{s ↦ u}∈SESSIONS ⤔ AUTHORIZED_USERS"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
 </org.eventb.core.prFile>
