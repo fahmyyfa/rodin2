@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:classdiagrams="http://soton.ac.uk/models/eventb/classdiagrams/2020" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_NRlrQLutEfCvBLbN9hEcJw" type="Classdiagrams" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_HsqNoLuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_HsvGILuuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_HsxiYLuuEfCvBLbN9hEcJw" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HsxiYbuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HsxiYruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_HsxiY7uuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HsxiZLuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HsxiZbuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_HsxiZruuEfCvBLbN9hEcJw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HsxiZ7uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HsxiaLuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_HsxiabuuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HsxiaruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Hsxia7uuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_HsqNobuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HsqNoruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_HsqNo7uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.DataSubject"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HsqNpLuuEfCvBLbN9hEcJw" x="1074" y="450" width="415" height="136"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_WN_wILuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_WN_wJbuuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WN_wJruuEfCvBLbN9hEcJw" type="7006">
+      <children xmi:type="notation:Node" xmi:id="_u1_cwLuyEfC1k4U2xfoWDQ" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.AuthorizedUser.username"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_u1_cwbuyEfC1k4U2xfoWDQ"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WN_wJ7uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WN_wKLuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WN_wKbuuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WN_wKruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WN_wK7uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WN_wLLuuEfCvBLbN9hEcJw" type="7007">
+      <children xmi:type="notation:Node" xmi:id="_Ejg5ILuzEfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.AuthorizedUser._Ejg5IruzEfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ejg5IbuzEfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Mm5j8Lu3EfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.AuthorizedUser._Mm6yELu3EfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Mm5j8bu3EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_gTlxALu3EfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.AuthorizedUser._gTqCcLu3EfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gTlxAbu3EfCTJIiKIKKL-Q"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WN_wLbuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WN_wLruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WN_wL7uuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WN_wMLuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WN_wMbuuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_WN_wIbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WN_wIruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_WN_wI7uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.AuthorizedUser"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WN_wJLuuEfCvBLbN9hEcJw" x="72" y="708" width="408" height="211"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_XV2wELuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_XV2wFbuuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_XV2wFruuEfCvBLbN9hEcJw" type="7006">
+      <children xmi:type="notation:Node" xmi:id="_YWSmcLu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.Role.name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YWSmcbu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_XV2wF7uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_XV2wGLuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_XV2wGbuuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_XV2wGruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_XV2wG7uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_XV2wHLuuEfCvBLbN9hEcJw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_XV2wHbuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_XV2wHruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_XV2wH7uuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_XV2wILuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_XV2wIbuuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_XV2wEbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_XV2wEruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_XV2wE7uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.Role"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XV2wFLuuEfCvBLbN9hEcJw" x="528" y="324" width="193" height="198"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_YcPwYLuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YcPwZbuuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_YcPwZruuEfCvBLbN9hEcJw" type="7006">
+      <children xmi:type="notation:Node" xmi:id="_q9qKMLu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.Consent.consentDetail"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_q9qKMbu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_tjC4ELu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.Consent.consentVersion"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tjC4Ebu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_vV25gLu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.Consent.dataRetention"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vV25gbu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YcPwZ7uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YcPwaLuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_YcPwabuuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YcPwaruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YcPwa7uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_YcQ-gLuuEfCvBLbN9hEcJw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YcQ-gbuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YcQ-gruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_YcQ-g7uuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YcQ-hLuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YcQ-hbuuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_YcPwYbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_YcPwYruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_YcPwY7uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.Consent"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YcPwZLuuEfCvBLbN9hEcJw" x="768" y="246" width="277" height="144"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ZUzwELuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_ZUzwFbuuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ZUzwFruuEfCvBLbN9hEcJw" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ZUzwF7uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ZUzwGLuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ZUzwGbuuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ZUzwGruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ZUzwG7uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ZUzwHLuuEfCvBLbN9hEcJw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ZUzwHbuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ZUzwHruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ZUzwH7uuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ZUzwILuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ZUzwIbuuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_ZUzwEbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ZUzwEruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_ZUzwE7uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.Session"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZUzwFLuuEfCvBLbN9hEcJw" x="90" y="996" width="325" height="174"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ayRzoLuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_ayRzpbuuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ayRzpruuEfCvBLbN9hEcJw" type="7006">
+      <children xmi:type="notation:Node" xmi:id="_lhzlgLu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.DataField.fieldName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lhzlgbu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_pFP3ELu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.DataField.fieldType"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pFP3Ebu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ayRzp7uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ayRzqLuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ayRzqbuuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ayRzqruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ayRzq7uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ayRzrLuuEfCvBLbN9hEcJw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ayRzrbuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ayRzrruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ayRzr7uuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ayRzsLuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ayRzsbuuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_ayRzobuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ayRzoruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_ayRzo7uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.DataField"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ayRzpLuuEfCvBLbN9hEcJw" x="756" y="30" width="289" height="160"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_cAR30LuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_cAR31buuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_cAR31ruuEfCvBLbN9hEcJw" type="7006">
+      <children xmi:type="notation:Node" xmi:id="__nJWsLu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.DataValue.fieldValue"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="__nJWsbu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cAR317uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cAR32LuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_cAR32buuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cAR32ruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cAR327uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_cAR33LuuEfCvBLbN9hEcJw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cAR33buuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cAR33ruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_cAR337uuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cAR34LuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cAR34buuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_cAR30buuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_cAR30ruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_cAR307uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.DataValue"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cAR31LuuEfCvBLbN9hEcJw" x="1086" y="792" width="373" height="144"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_c5W04LuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_c5W05buuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_c5W05ruuEfCvBLbN9hEcJw" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_c5W057uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_c5W06LuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_c5W06buuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_c5W06ruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_c5W067uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_c5W07LuuEfCvBLbN9hEcJw" type="7007">
+      <children xmi:type="notation:Node" xmi:id="_yqfvgLu6EfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.Query._yqgWkLu6EfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_yqfvgbu6EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_6-etALu8EfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.Query._6-etAru8EfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_6-etAbu8EfCTJIiKIKKL-Q"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_c5W07buuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_c5W07ruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_c5W077uuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_c5W08LuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_c5W08buuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_c5W04buuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_c5W04ruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_c5W047uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.Query"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c5W05LuuEfCvBLbN9hEcJw" x="138" y="354" width="264" height="228"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_eYMKYLuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_eYMxcLuuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_eYMxcbuuEfCvBLbN9hEcJw" type="7006">
+      <children xmi:type="notation:Node" xmi:id="_yNAs0Lu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.DataSubjectConsent.acceptedFlag"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_yNAs0bu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_5eL0YLu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.DataSubjectConsent.createdDate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5eL0Ybu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_7UZvILu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.DataSubjectConsent.withdrawnFlag"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7UZvIbu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_9U6OULu7EfCTJIiKIKKL-Q" type="3022">
+        <element xmi:type="classdiagrams:ClassAttribute" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassAttribute::CRSM_Machine.CRSM_Visual_Diagram.DataSubjectConsent.withdrawnDate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9U6OUbu7EfCTJIiKIKKL-Q"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_eYMxcruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_eYMxc7uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_eYMxdLuuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_eYMxdbuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_eYMxdruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_eYMxd7uuEfCvBLbN9hEcJw" type="7007">
+      <children xmi:type="notation:Node" xmi:id="_nOv9kLu9EfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.DataSubjectConsent._nOwkoLu9EfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_nOv9kbu9EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_njbNELu9EfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.DataSubjectConsent._njbNEru9EfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_njbNEbu9EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_n-0IkLu9EfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.DataSubjectConsent._n-0Ikru9EfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_n-0Ikbu9EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oS7-cLu9EfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.DataSubjectConsent._oS7-cru9EfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oS7-cbu9EfCTJIiKIKKL-Q"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_eYMxeLuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_eYMxebuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_eYMxeruuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_eYMxe7uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_eYMxfLuuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_eYMKYbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_eYMKYruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_eYMKY7uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.DataSubjectConsent"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eYMKZLuuEfCvBLbN9hEcJw" x="690" y="576"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_fvk0ELuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_fvlbILuuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_fvlbIbuuEfCvBLbN9hEcJw" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_fvlbIruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_fvlbI7uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_fvlbJLuuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_fvlbJbuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_fvlbJruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_fvlbJ7uuEfCvBLbN9hEcJw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_fvlbKLuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_fvlbKbuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_fvlbKruuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_fvlbK7uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_fvlbLLuuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_fvk0EbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_fvk0EruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_fvk0E7uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.ConsentRoleField"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fvk0FLuuEfCvBLbN9hEcJw" x="30" y="192" width="306" height="96"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_g2uCULuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_g2uCVbuuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_g2uCVruuEfCvBLbN9hEcJw" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_g2uCV7uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_g2uCWLuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_g2uCWbuuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_g2uCWruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_g2uCW7uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_g2uCXLuuEfCvBLbN9hEcJw" type="7007">
+      <children xmi:type="notation:Node" xmi:id="_npLFMLu8EfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.ConsentAccessPolicy._npLsQLu8EfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_npLFMbu8EfCTJIiKIKKL-Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_0LWzYLu8EfCTJIiKIKKL-Q" type="3023">
+        <element xmi:type="classdiagrams:ClassMethod" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::ClassMethod::CRSM_Machine.CRSM_Visual_Diagram.ConsentAccessPolicy._0LWzYru8EfCTJIiKIKKL-Q"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_0LWzYbu8EfCTJIiKIKKL-Q"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_g2uCXbuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_g2uCXruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_g2uCX7uuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_g2uCYLuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_g2uCYbuuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_g2uCUbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_g2uCUruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_g2uCU7uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.ConsentAccessPolicy"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g2uCVLuuEfCvBLbN9hEcJw" x="126" y="24" width="319" height="118"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_6A5LwLuuEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_6A5LxbuuEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_6A5LxruuEfCvBLbN9hEcJw" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_6A5Lx7uuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_6A5LyLuuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_6A5LybuuEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_6A5LyruuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_6A5Ly7uuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_6A5LzLuuEfCvBLbN9hEcJw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_6A5LzbuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_6A5LzruuEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_6A5Lz7uuEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_6A5L0LuuEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_6A5L0buuEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_6A5LwbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_6A5LwruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_6A5Lw7uuEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.crf"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6A5LxLuuEfCvBLbN9hEcJw" x="552" y="48"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_BjVpgLuvEfCvBLbN9hEcJw" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BjW3oLuvEfCvBLbN9hEcJw" type="5007"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BjW3obuvEfCvBLbN9hEcJw" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BjW3oruvEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BjW3o7uvEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BjW3pLuvEfCvBLbN9hEcJw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BjW3pbuvEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BjW3pruvEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BjW3p7uvEfCvBLbN9hEcJw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BjW3qLuvEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BjW3qbuvEfCvBLbN9hEcJw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BjW3qruvEfCvBLbN9hEcJw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BjW3q7uvEfCvBLbN9hEcJw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BjW3rLuvEfCvBLbN9hEcJw"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_BjVpgbuvEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BjVpgruvEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_BjVpg7uvEfCvBLbN9hEcJw"/>
+    <element xmi:type="classdiagrams:Class" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Class::CRSM_Machine.CRSM_Visual_Diagram.Status"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BjVphLuvEfCvBLbN9hEcJw" x="564" y="954" width="360" height="162"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_NRlrQbutEfCvBLbN9hEcJw"/>
+  <element xmi:type="classdiagrams:Classdiagram" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Classdiagram::CRSM_Machine.CRSM_Visual_Diagram"/>
+  <edges xmi:type="notation:Edge" xmi:id="_lUa8sLuuEfCvBLbN9hEcJw" type="4005" source="_WN_wILuuEfCvBLbN9hEcJw" target="_XV2wELuuEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_lUa8tLuuEfCvBLbN9hEcJw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lUa8tbuuEfCvBLbN9hEcJw" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_lUcK0LuuEfCvBLbN9hEcJw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lUcK0buuEfCvBLbN9hEcJw" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_lUcK0ruuEfCvBLbN9hEcJw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lUcK07uuEfCvBLbN9hEcJw" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_lUa8sbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_lUa8sruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram.&lt;&lt;userRoles>>"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lUa8s7uuEfCvBLbN9hEcJw" points="[46, 2, -52, -1]$[92, -30, -6, -33]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_rSwjYLuuEfCvBLbN9hEcJw" type="4005" source="_WN_wILuuEfCvBLbN9hEcJw" target="_ZUzwELuuEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rSwjZLuuEfCvBLbN9hEcJw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rSwjZbuuEfCvBLbN9hEcJw" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_rSwjZruuEfCvBLbN9hEcJw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rSwjZ7uuEfCvBLbN9hEcJw" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_rSwjaLuuEfCvBLbN9hEcJw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rSwjabuuEfCvBLbN9hEcJw" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_rSwjYbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rSwjYruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram.sessions"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rSwjY7uuEfCvBLbN9hEcJw" points="[-20, 33, 18, -31]$[-38, 125, 0, 61]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rSy_oLuuEfCvBLbN9hEcJw" id="(0.4927536231884058,0.06818181818181818)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_vA_vsLuuEfCvBLbN9hEcJw" type="4005" source="_HsqNoLuuEfCvBLbN9hEcJw" target="_eYMKYLuuEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_vA_vtLuuEfCvBLbN9hEcJw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vA_vtbuuEfCvBLbN9hEcJw" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_vA_vtruuEfCvBLbN9hEcJw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vA_vt7uuEfCvBLbN9hEcJw" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_vA_vuLuuEfCvBLbN9hEcJw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vA_vubuuEfCvBLbN9hEcJw" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_vA_vsbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_vA_vsruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram.pc"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vA_vs7uuEfCvBLbN9hEcJw" points="[29, 33, -121, -138]$[151, 146, 1, -25]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vBEBILuuEfCvBLbN9hEcJw" id="(0.19480519480519481,0.38636363636363635)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_xXbbkLuuEfCvBLbN9hEcJw" type="4005" source="_HsqNoLuuEfCvBLbN9hEcJw" target="_cAR30LuuEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_xXbblLuuEfCvBLbN9hEcJw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_xXbblbuuEfCvBLbN9hEcJw" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_xXbblruuEfCvBLbN9hEcJw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_xXbbl7uuEfCvBLbN9hEcJw" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_xXbbmLuuEfCvBLbN9hEcJw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_xXbbmbuuEfCvBLbN9hEcJw" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_xXbbkbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_xXbbkruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram.pf"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xXbbk7uuEfCvBLbN9hEcJw" points="[-3, 33, 0, -144]$[-3, 144, 0, -33]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_z1JbMLuuEfCvBLbN9hEcJw" type="4005" source="_WN_wILuuEfCvBLbN9hEcJw" target="_c5W04LuuEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_z1JbNLuuEfCvBLbN9hEcJw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_z1JbNbuuEfCvBLbN9hEcJw" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_z1JbNruuEfCvBLbN9hEcJw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_z1JbN7uuEfCvBLbN9hEcJw" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_z1JbOLuuEfCvBLbN9hEcJw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_z1JbObuuEfCvBLbN9hEcJw" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_z1JbMbuuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_z1JbMruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram.&lt;&lt;inquiries>>"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_z1JbM7uuEfCvBLbN9hEcJw" points="[-3, 16, 45, -145]$[-38, 194, 10, 33]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_z1L3cLuuEfCvBLbN9hEcJw" id="(0.6147540983606558,0.7613636363636364)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_3YTY4LuuEfCvBLbN9hEcJw" type="4005" source="_WN_wILuuEfCvBLbN9hEcJw" target="_eYMKYLuuEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_3YTY5LuuEfCvBLbN9hEcJw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_3YTY5buuEfCvBLbN9hEcJw" x="-29" y="-38"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_3YTY5ruuEfCvBLbN9hEcJw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_3YTY57uuEfCvBLbN9hEcJw" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_3YTY6LuuEfCvBLbN9hEcJw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_3YTY6buuEfCvBLbN9hEcJw" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_3YTY4buuEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_3YTY4ruuEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram.authorizedConsent"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3YTY47uuEfCvBLbN9hEcJw" points="[8, 33, -59, -144]$[14, 210, -53, 33]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Db-mILuvEfCvBLbN9hEcJw" type="4005" source="_eYMKYLuuEfCvBLbN9hEcJw" target="_BjVpgLuvEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Db-mJLuvEfCvBLbN9hEcJw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Db-mJbuvEfCvBLbN9hEcJw" x="7" y="19"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Db-mJruvEfCvBLbN9hEcJw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Db-mJ7uvEfCvBLbN9hEcJw" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Db-mKLuvEfCvBLbN9hEcJw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Db-mKbuvEfCvBLbN9hEcJw" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_Db-mIbuvEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Db-mIruvEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram.withdrawalState"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Db-mI7uvEfCvBLbN9hEcJw" points="[58, 22, -86, -61]$[180, 40, 36, -43]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_FhResLuvEfCvBLbN9hEcJw" type="4005" source="_eYMKYLuuEfCvBLbN9hEcJw" target="_BjVpgLuvEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FhRetLuvEfCvBLbN9hEcJw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_FhRetbuvEfCvBLbN9hEcJw" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_FhRetruvEfCvBLbN9hEcJw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_FhRet7uvEfCvBLbN9hEcJw" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_FhReuLuvEfCvBLbN9hEcJw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_FhReubuvEfCvBLbN9hEcJw" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_FhResbuvEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_FhResruvEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram.portableState"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FhRes7uvEfCvBLbN9hEcJw" points="[21, 19, -97, -86]$[119, 128, 1, 23]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FhTT4LuvEfCvBLbN9hEcJw" id="(0.7597402597402597,0.7159090909090909)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FhTT4buvEfCvBLbN9hEcJw" id="(0.7916666666666666,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_HfNLALuvEfCvBLbN9hEcJw" type="4005" source="_eYMKYLuuEfCvBLbN9hEcJw" target="_BjVpgLuvEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_HfNLBLuvEfCvBLbN9hEcJw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HfNLBbuvEfCvBLbN9hEcJw" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_HfNLBruvEfCvBLbN9hEcJw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HfNLB7uvEfCvBLbN9hEcJw" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_HfNLCLuvEfCvBLbN9hEcJw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HfNLCbuvEfCvBLbN9hEcJw" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_HfNLAbuvEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HfNLAruvEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram.consentRenewalState"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HfNLA7uvEfCvBLbN9hEcJw" points="[0, 6, -24, -229]$[15, 154, -9, -81]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4bpyoLu2EfCTJIiKIKKL-Q" id="(0.14084507042253522,0.9739130434782609)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_k-M_oLuvEfCvBLbN9hEcJw" type="4005" source="_6A5LwLuuEfCvBLbN9hEcJw" target="_YcPwYLuuEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_k-M_pLuvEfCvBLbN9hEcJw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_k-M_pbuvEfCvBLbN9hEcJw" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_k-M_pruvEfCvBLbN9hEcJw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_k-M_p7uvEfCvBLbN9hEcJw" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_k-M_qLuvEfCvBLbN9hEcJw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_k-M_qbuvEfCvBLbN9hEcJw" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_k-M_obuvEfCvBLbN9hEcJw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_k-M_oruvEfCvBLbN9hEcJw" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram."/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_k-M_o7uvEfCvBLbN9hEcJw" points="[-15, -2, 307, 38]$[-329, -7, -7, 33]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2RtAYLuyEfCTJIiKIKKL-Q" type="4005" source="_6A5LwLuuEfCvBLbN9hEcJw" target="_XV2wELuuEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_2Ru1kLuyEfCTJIiKIKKL-Q" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2Ru1kbuyEfCTJIiKIKKL-Q" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_2Ru1kruyEfCTJIiKIKKL-Q" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2Ru1k7uyEfCTJIiKIKKL-Q" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_2Ru1lLuyEfCTJIiKIKKL-Q" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2Ru1lbuyEfCTJIiKIKKL-Q" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_2RtAYbuyEfCTJIiKIKKL-Q"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2RtAYruyEfCTJIiKIKKL-Q" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram."/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2RtAY7uyEfCTJIiKIKKL-Q" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2RxR0LuyEfCTJIiKIKKL-Q" type="4005" source="_6A5LwLuuEfCvBLbN9hEcJw" target="_ayRzoLuuEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_2RxR1LuyEfCTJIiKIKKL-Q" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2RxR1buyEfCTJIiKIKKL-Q" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_2RxR1ruyEfCTJIiKIKKL-Q" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2RxR17uyEfCTJIiKIKKL-Q" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_2RxR2LuyEfCTJIiKIKKL-Q" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2RxR2buyEfCTJIiKIKKL-Q" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_2RxR0buyEfCTJIiKIKKL-Q"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2RxR0ruyEfCTJIiKIKKL-Q" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram."/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2RxR07uyEfCTJIiKIKKL-Q" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oTBrwLvCEfCTJIiKIKKL-Q" type="4005" source="_eYMKYLuuEfCvBLbN9hEcJw" target="_cAR30LuuEfCvBLbN9hEcJw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oTBrxLvCEfCTJIiKIKKL-Q" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oTBrxbvCEfCTJIiKIKKL-Q" x="-5" y="-5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_oTBrxrvCEfCTJIiKIKKL-Q" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oTBrx7vCEfCTJIiKIKKL-Q" x="5" y="5"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_oTBryLvCEfCTJIiKIKKL-Q" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oTBrybvCEfCTJIiKIKKL-Q" x="8" y="-5"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oTBrwbvCEfCTJIiKIKKL-Q"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oTBrwrvCEfCTJIiKIKKL-Q" fontName="Segoe UI"/>
+    <element xmi:type="classdiagrams:Association" href="CRSM_Machine.bum#http://soton.ac.uk/models/eventb/classdiagrams/2020::Association::CRSM_Machine.CRSM_Visual_Diagram.&lt;&lt;creates>>"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oTBrw7vCEfCTJIiKIKKL-Q" points="[20, 15, -116, -92]$[137, 158, 1, 51]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oTFWILvCEfCTJIiKIKKL-Q" id="(0.8779342723004695,0.28695652173913044)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oTFWIbvCEfCTJIiKIKKL-Q" id="(0.18230563002680966,0.5347222222222222)"/>
+  </edges>
+</notation:Diagram>
